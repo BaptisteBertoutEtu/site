@@ -1,0 +1,127 @@
+/*
+ * Copyright (c) Baptiste Bertout.
+ * Mail : baptiste.bertout@gmail.com
+ */
+
+html{
+    background-image: url("https://imao.fr/wp-content/uploads/2017/06/path.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+}
+
+.main-tab{
+    margin: 50px auto;
+    width: 70%;
+}
+
+.choice-tab{
+    margin: 50px auto;
+    width: 70%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cell{
+    border: solid hsl(0, 0%, 40%) 1px;
+}
+
+.first-line-cell{
+    background-color: #235E85;
+}
+
+.left-cells{
+    background-color: lightgrey;
+}
+
+.first-line{
+    font-size: 20px;
+}
+
+.other-line:nth-child(3n){
+    background-color: white;
+}
+
+.other-line:nth-child(2n){
+    background-color: hsla(0, 0%, 83%, 0.558);
+}
+
+
+.title-cells{
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.units{
+    font-size: 15px;
+    font-style: oblique;
+    font-weight: lighter;
+}
+
+.cell-info{background-color: white;}
+
+.info{
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+.acquis{
+    width: max-content;
+}
+
+.choice{
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    align-self: center;
+}
+
+.cell-choice{
+    text-align: center;
+    background-color: white;
+}
+
+.div-button{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.calcul-button{
+    font-size: 20px;
+    padding: 10px;
+    background-color: #63c3d2;
+    border: solid 2px #63c3d2;
+    color: white;
+}
+
+.calcul-button:hover{
+    border: dashed 2px #235E85;
+}
+
+.entete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 20px;
+    color: #235E85;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

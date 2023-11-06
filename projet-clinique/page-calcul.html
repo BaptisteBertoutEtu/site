@@ -1,0 +1,93 @@
+<!--
+ Copyright (c) Baptiste Bertout.
+ Mail : baptiste.bertout@gmail.com
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole d'injection</title>
+    <link rel="stylesheet" href="../css/style-calcul-injection.css">
+    <link rel="shortcut icon" type="image/png" href="../images/logo-imao.png"/>
+</head>
+<body>
+
+    <div class="entete">
+        <h1 class="title">Protocole d'injection vasculaire</h1>
+    </div>
+
+    <div class="choice-tab">
+        <table>
+            <tr class="first-line">
+                <th class="cell first-line-cell title-cells">Type d'examen</th>
+                <th class="cell first-line-cell title-cells">Type de patient</th>
+                <th class="cell first-line-cell title-cells">Temps arrivée <br><span class="units">sec.</span></th>
+                <th class="cell first-line-cell title-cells">Temps acquisition <br><span class="units">sec.</span></th>
+            </tr>
+            <tr>
+                <td class="cell cell-choice">
+                    <select name="examen" id="exam-select" class="choice" onchange="changeValueTempsArriv()">
+                        <option value="">-- Choisissez un examen --</option>
+                        <option value="embolie">Embolie pulmonaire</option>
+                        <option value="coroscanner">Coroscanner</option>
+                        <option value="carotide">Carotide</option>
+                        <option value="aorteCrosse">Aorte toracique</option>
+                        <option value="aorteAbdo">Aorte abdo</option>
+                        <option value="membreInf">Membres inférieurs</option>
+                    </select>
+                </td>
+                <td class="cell cell-choice">
+                    <select name="patient" id="patient-select" class="choice" onchange="changeValueDebit()">
+                        <option value="">-- Choisissez un patient --</option>
+                        <option value="agé">Patient âgé</option>
+                        <option value="normal">Patient normal</option>
+                        <option value="sportif">Jeune, sportif, femme enceinte</option>
+                        <option value="obese">Patient obèse (120-140 Kg)</option>
+                    </select>
+                </td>
+                <td class="cell cell-choice"><input type="number" min="0" class="arriv choice" id="tempsArriv" placeholder="sec." disabled></td>
+                <td class="cell cell-choice"><input type="number" min="0" class="acquis choice" placeholder="sec."></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="div-button">
+        <input class="calcul-button" type="button" value="Calculer" onclick="calculer()">
+    </div>
+    
+    <div class="main-tab">
+        <table>
+            <tr class="first-line">
+                <th class="cell first-line-cell title-cells">Temps d'injection <br> <span class="units">sec.</span></th>
+                <th class="cell first-line-cell title-cells">Débit d'iode <br><span class="units">g /sec.</span></th>
+                <th class="cell first-line-cell title-cells">Concentration <br><span class="units">mg/mL.</span></th>
+                <th class="cell first-line-cell title-cells">Vitesse d'injection <br><span class="units">mL/sec.</span></th>
+                <th class="cell first-line-cell title-cells">Volume <br><span class="units">mL</span></th>
+            </tr>
+            <tr class="other-line">
+                <td class="cell cell-info" rowspan="3"><p class="info" id="tempsInjec">NaN</p></td>
+                <td class="cell cell-info" rowspan="3"><p class="info" id="debitIode">NaN</p></td>
+                <td class="cell"><p class="info">300</p></td>
+                <td class="cell"><p class="info" id="vitesseInjec300">NaN</p></td>
+                <td class="cell"><p class="info" id="vol300">NaN</p></td>
+            </tr>
+            <tr class="other-line">
+                <td class="cell"><p class="info">320</p></td>
+                <td class="cell"><p class="info" id="vitesseInjec320">NaN</p></td>
+                <td class="cell"><p class="info" id="vol320">NaN</p></td>
+            </tr>
+            <tr class="other-line">
+                <td class="cell"><p class="info">350</p></td>
+                <td class="cell"><p class="info" id="vitesseInjec350">NaN</p></td>
+                <td class="cell"><p class="info" id="vol350">NaN</p></td>
+            </tr>
+        </table>
+
+        <footer>Copyright &copy; Baptiste Bertout &emsp; Mail : baptiste.bertout@gmail.com</footer>
+    </div>
+
+    <script src="../js/program-injection.js"></script>
+</body>
+</html>
