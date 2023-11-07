@@ -1918,12 +1918,12 @@ TODO: marque page
 }
 
 .link-header{
-    padding: 7px 20px 7px 20px;
+    padding: 7px 10px 7px 10px;
     font-family: extraLight;
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: white;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -2009,7 +2009,7 @@ TODO: marque page
 
 .home-title{
     color: white;
-    font-size: 5em;
+    font-size: 4.5em;
     font-family: extraLight;
     margin: 5vh;
 }
@@ -2042,7 +2042,7 @@ TODO: marque page
     text-align: center;
     padding: 20px;
     line-height: 30px;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .link-in-text{
@@ -2089,7 +2089,7 @@ TODO: marque page
 }
 
 #photo{
-    width: 80%;
+    width: 100%;
 }
 
 .name-surname{
@@ -2115,7 +2115,7 @@ TODO: marque page
     flex-direction: column;
     justify-content: space-around;
     align-self: center;
-    width: 70%;
+    width: 80%;
     border: solid 1px ;
     margin: 20px;
     padding: 30px;
@@ -2190,7 +2190,7 @@ TODO: marque page
 .title{
     font-size: 2em;
     text-align: center;
-    width: 50%;
+    width: 70%;
     margin-bottom: 40px;
 }
 
@@ -2203,14 +2203,13 @@ TODO: marque page
 
 .content_projet{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
 }
 
 .project-image-presentation{
-    width: 55%;
-    margin: 20px;
+    align-self: center;
+    width: 95%;
 }
 
 .value_image_projet{
@@ -2222,17 +2221,23 @@ TODO: marque page
 .mini_presentation{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
-    width: 35%;
+    width: 100%;
     padding: 30px 0px;
 }
 
 
+.nom_projet{
+    display: flex;
+    justify-content: center;
+}
+
+
 .text_presentation_projet{
+    font-size: 1.1em;
+    width: 100%;
+    margin: 10px 0;
     text-align: center;
-    font-size: 1em;
-    width: 90%;
 }
 
 
@@ -2255,7 +2260,7 @@ TODO: marque page
 
 .social{
     align-self: center;
-    width: 40%;
+    width: 50%;
 }
 
 .content_social{
@@ -2293,7 +2298,7 @@ TODO: marque page
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 70%;
+    width: 80%;
     margin: 70px 0px;
     border: 2px solid hsla(0, 0%, 87%, 0.705);
     border-radius: 30px;
