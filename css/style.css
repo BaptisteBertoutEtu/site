@@ -1244,6 +1244,7 @@ a{
     align-items: center;
     justify-content: space-between;
     transition: all 0.3s ease-in-out;
+    display: none;
 }
 
 .refresh:active{
@@ -1287,9 +1288,7 @@ a{
 }
 
 .header-right{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: none;
 }
 
 .link-header{
@@ -1375,6 +1374,7 @@ a{
 .begin{
     margin: 0;
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1384,9 +1384,10 @@ a{
 
 .home-title{
     color: white;
-    font-size: 5em;
+    font-size: 3.5em;
     font-family: extraLight;
-    margin: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
 }
 
 .letter-p{
@@ -1413,11 +1414,11 @@ a{
 }
 
 .content-presentation{
-    width: 60%;
+    width: 80%;
     text-align: center;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     line-height: 30px;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .link-in-text{
@@ -1452,27 +1453,34 @@ a{
     align-self: center;
     display: flex;
     flex-direction: row;
-    width: 50%;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    justify-content: space-around;
+    width: 80%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .photo_profil{
-    width: 50%;
+    width: 40%;
     display: flex;
+    justify-content: center;
 }
 
 #photo{
-    width: 70%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    align-self: center;
 }
 
 .name-surname{
-    font-family: extraLight;
-    font-size: 2.8em;
     margin: auto;
     text-align: center;
-    width: 60%;
+    width: 40%;
+}
+
+.value-name-surname{
+    font-family: extraLight;
+    font-size: 180%;
 }
 
 .my-presentation{
@@ -1485,12 +1493,16 @@ a{
     flex-direction: column;
 }
 
+.without-margin-bottom{
+    margin-bottom: 0 !important;
+}
+
 .sect{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-self: center;
-    width: 60%;
+    width: 70%;
     border: solid 1px ;
     margin: 20px;
     padding: 30px;
@@ -1498,7 +1510,7 @@ a{
 }
 
 .mini-title{
-    font-size: 24px;
+    font-size: 1.2em;
     width: fit-content;
     margin-top: 5px;
 }
@@ -1511,6 +1523,7 @@ a{
 
 .content-about{
     line-height: 1.6em;
+    font-size: 0.8em;
     letter-spacing: 1px;
 }
 
@@ -1530,6 +1543,7 @@ a{
     letter-spacing: 2px;
     border-radius: 10px;
     width: fit-content;
+    font-size: 0.8em;
     font-family: extraLight;
     transition: all 0.2s;
     margin: 6px;
@@ -1563,7 +1577,7 @@ a{
 }
 
 .title{
-    font-size: 35px;
+    font-size: 1.5em;
     text-align: center;
     width: 50%;
     margin-bottom: 40px;
@@ -1578,12 +1592,12 @@ a{
 
 .content_projet{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
 .project-image-presentation{
-    width: 45%;
+    width: 90%;
     margin: 20px;
 }
 
@@ -1597,14 +1611,20 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40%;
+    width: 100%;
     padding: 30px 0px;
+}
+
+.nom_projet{
+    display: flex;
+    justify-content: center;
 }
 
 
 .text_presentation_projet{
     font-size: 20px;
-    width: 90%;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -1627,7 +1647,7 @@ a{
 
 .social{
     align-self: center;
-    width: 35%;
+    width: 60%;
 }
 
 .content_social{
@@ -1665,7 +1685,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 60%;
+    width: 95%;
     margin: 70px 0px;
     border: 2px solid hsla(0, 0%, 87%, 0.705);
     border-radius: 30px;
@@ -1682,12 +1702,12 @@ a{
 
 .titre_contact{
     text-align: left;
-    font-size: 1.6em;
+    font-size: 1em;
 }
 
 .content_moyen{
     align-self: center;
-    font-size: 1.4em;
+    font-size: 1em;
     color: hsl(330, 85%, 49%);
     border-bottom: white dotted 1px;
     width: fit-content;
@@ -1705,7 +1725,6 @@ a{
 .ok{
     width: 50%;
     padding: 2px;
-    margin-left: 10px;
     opacity: 0;
 }
 
