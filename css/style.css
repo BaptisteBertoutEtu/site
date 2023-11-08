@@ -558,7 +558,7 @@ TODO: marque page
 .content_presentation{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     margin: auto;
     text-align: left;
     font-size: 20px;
@@ -628,6 +628,12 @@ iframe{
 .button_back{
     padding: 40px 0px;
     font-size: 20px;
+}
+
+.all-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 a{
@@ -1165,7 +1171,7 @@ TODO: marque page
 .content_presentation{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     margin: auto;
     text-align: left;
     font-size: 20px;
@@ -1235,6 +1241,12 @@ iframe{
 .button_back{
     padding: 40px 0px;
     font-size: 20px;
+}
+
+.all-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 a{
@@ -1773,7 +1785,7 @@ TODO: marque page
 .content_presentation{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     margin: auto;
     text-align: left;
     font-size: 20px;
@@ -1843,6 +1855,12 @@ iframe{
 .button_back{
     padding: 40px 0px;
     font-size: 20px;
+}
+
+.all-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 a{
@@ -2387,7 +2405,7 @@ TODO: marque page
 .content_presentation{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     margin: auto;
     text-align: left;
     font-size: 20px;
@@ -2879,7 +2897,7 @@ TODO: marque page
 .content_presentation{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     margin: auto;
     text-align: left;
     font-size: 20px;
@@ -2949,6 +2967,12 @@ iframe{
 .button_back{
     padding: 40px 0px;
     font-size: 20px;
+}
+
+.all-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 a{
