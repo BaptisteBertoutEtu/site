@@ -173,5 +173,14 @@ function calculVolume(){
 function changeValueTempsArriv(){
     let index = examType.selectedIndex;
     let valueExam = examType.options[index].value;
+    if(valueExam != "embolie") {
+        patientType.disabled = true;
+        patientType.value = "normal";
+    }
+    else {
+        patientType.disabled = false;
+        patientType.value = "";
+    }
+    changeValueDebit();
     document.getElementById("tempsArriv").value = mapExam.get(valueExam);
 }
