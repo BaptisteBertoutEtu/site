@@ -3,21 +3,23 @@
  * Mail : baptiste.bertout@gmail.com
  */
 
-let examType = document.getElementById("exam-select");
-let patientType = document.getElementById("patient-select");
-let timeArriv = document.querySelector(".arriv");
-let timeAcquis = document.querySelector(".acquis");
+const examType = document.getElementById("exam-select");
+const patientType = document.getElementById("patient-select");
+const timeArriv = document.querySelector(".arriv");
+const timeAcquis = document.querySelector(".acquis");
+const tempsInjec = document.getElementById("tempsInjec");
+const debitIode = document.getElementById("debitIode");
 
-let tabConcentration = [300,320,350];
-let allVitesseInjec = "vitesseInjec";
-let allVolume = "vol";
+
+
+const tabConcentration = [300,320,350];
+const allVitesseInjec = "vitesseInjec";
+const allVolume = "vol";
 
 let valueTempsInjec = 0;
 let valueDebit = 0;
 let valueVitesseInjec = [];
 let valueVolume = [];
-
-let tempsInjec
 
 let mapPatient = new Map();
 mapPatient.set("","NaN");
@@ -39,7 +41,7 @@ mapExam.set("carotide",20);
  * Elle permet de calculer les différentes valeurs.
  */
 function calculer() {
-    if( !examNotNull() || !patientNotNull() || !acquisNotNull()  ) setNaN();
+    if( !examNotNull() || !patientNotNull() ) setNaN();
     else calculAll();
 }
 
@@ -98,8 +100,9 @@ function notNull(temp) {
  * Méthode {@code setNaN} permettant de définir les valeurs à "NaN" pour indiquer qu'aucun calcul n'a été effectué.
  */
 function setNaN(){
-    document.getElementById("tempsInjec").innerText = "NaN";
-    document.getElementById("debitIode").innerText = "NaN";
+    timeAcquis.value = "";
+    tempsInjec.innerText = "NaN";
+    debitIode.innerText = "NaN";
     tabConcentration.forEach(element => {
         document.getElementById(allVitesseInjec+element).innerText = "NaN";
         document.getElementById(allVolume+element).innerText = "NaN";
@@ -111,7 +114,6 @@ function setNaN(){
  */
 function calculAll(){
     calculTempInjec();
-    calculVitesse();
     calculVolume();
 }
 
@@ -120,7 +122,7 @@ function calculAll(){
  */
 function calculTempInjec() {
     valueTempsInjec = parseInt(timeArriv.value) -(parseInt(timeAcquis.value)/2);
-    document.getElementById("tempsInjec").innerText = valueTempsInjec;
+    tempsInjec.innerText = valueTempsInjec;
 }
 
 /**
@@ -131,7 +133,9 @@ function changeValueDebit(){
     let index = patientType.selectedIndex;
     let valuePatient = patientType.options[index].value;
     valueDebit = mapPatient.get(valuePatient);
-    document.getElementById("debitIode").innerText = valueDebit;
+    debitIode.innerText = valueDebit;
+    calculVitesse();
+    if(notNull(timeAcquis)) calculAll();
 }
 
 /**
@@ -173,9 +177,13 @@ function calculVolume(){
 function changeValueTempsArriv(){
     let index = examType.selectedIndex;
     let valueExam = examType.options[index].value;
-    if(valueExam != "embolie") {
+    if(valueExam != "embolie" && valueExam != "") {
         patientType.disabled = true;
         patientType.value = "normal";
+    }
+    else if(valueExam == ""){
+        patientType.value = "";
+        patientType.disabled = false;
     }
     else {
         patientType.disabled = false;

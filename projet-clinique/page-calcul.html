@@ -48,14 +48,11 @@
                     </select>
                 </td>
                 <td class="cell cell-choice"><input type="number" min="0" class="arriv choice" id="tempsArriv" placeholder="sec." disabled></td>
-                <td class="cell cell-choice"><input type="number" min="0" class="acquis choice" placeholder="sec."></td>
+                <td class="cell cell-choice"><input type="number" min="0" class="acquis choice" placeholder="sec." onkeyup="calculer()"></td>
             </tr>
         </table>
     </div>
 
-    <div class="div-button">
-        <input class="calcul-button" type="button" value="Calculer" onclick="calculer()">
-    </div>
     
     <div class="main-tab">
         <table>
@@ -84,8 +81,6 @@
                 <td class="cell"><p class="info" id="vol350">NaN</p></td>
             </tr>
         </table>
-
-        <footer>Copyright &copy; Baptiste Bertout &emsp; Mail : baptiste.bertout@gmail.com</footer>
     </div>
 
     <script src="../js/program-injection.js"></script>
