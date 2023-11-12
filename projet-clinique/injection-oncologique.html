@@ -1,0 +1,63 @@
+<!--
+ Copyright (c) Baptiste Bertout.
+ Mail : baptiste.bertout@gmail.com
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocole d'injection</title>
+    <link rel="stylesheet" href="../css/style-calcul-injection.css">
+    <link rel="shortcut icon" type="image/png" href="../images/photo.png"/>
+</head>
+<body>
+
+    <div class="entete">
+        <h1 class="title">Protocole d'injection oncologique</h1>
+    </div>
+    
+    <div class="main-tab">
+        <table>
+            <tr class="first-line">
+                <th class="cell first-line-cell title-cells">Tension TUBE<br> <span class="units">g/kg.</span></th>
+                <th class="cell first-line-cell title-cells">Poids<br><span class="units">Kg.</span></th>
+                <th class="cell first-line-cell title-cells">Dose d'injection<br><span class="units">g d'iode.</span></th>
+                <th class="cell first-line-cell title-cells">Concentration<br><span class="units">mg/mL.</span></th>
+                <th class="cell first-line-cell title-cells">Débit d'injection<br><span class="units">cc/s.</span></th>
+                <th class="cell first-line-cell title-cells">Volume<br><span class="units">ml.</span></th>
+            </tr>
+            <tr class="other-line">
+                <td class="cell cell-info" rowspan="3"><p class="info" id="tension">
+                    <select name="tension-tube" id="tension-tube-select" class="choice" onchange="calculAll()">
+                        <option value="" selected>-- Choisissez un patient --</option>
+                        <option value="80"> 80Kg (0.3 g/Kg)</option>
+                        <option value="100"> 100Kg (0.4 g/Kg)</option>
+                        <option value="120"> 120Kg (0.5 g/Kg)</option>
+                    </select>
+                </p></td>
+                <td class="cell cell-info" rowspan="3"><p class="info" id="debitIode">
+                    <input type="number" min="0" placeholder="Kg" class="weight choice" onkeyup="calculer()">
+                </p></td>
+                <td class="cell" rowspan="3"><p class="info"  id="doseInjec">NaN</p></td>
+                <td class="cell"><p class="info">300</p></td>
+                <td class="cell"><p class="info" id="debitInjec300">NaN</p></td>
+                <td class="cell"><p class="info" id="vol300">NaN</p></td>
+            </tr>
+            <tr class="other-line">
+                <td class="cell"><p class="info">320</p></td>
+                <td class="cell"><p class="info" id="debitInjec320">NaN</p></td>
+                <td class="cell"><p class="info" id="vol320">NaN</p></td>
+            </tr>
+            <tr class="other-line">
+                <td class="cell"><p class="info">350</p></td>
+                <td class="cell"><p class="info" id="debitInjec350">NaN</p></td>
+                <td class="cell"><p class="info" id="vol350">NaN</p></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../js/program-injection-oncologique.js"></script>
+</body>
+</html>
