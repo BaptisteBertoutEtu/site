@@ -102,7 +102,7 @@ function calculDebitInjec(){
     let calcul;
     valueVolume.forEach(element => {
         calcul = element / 30;
-        valueDebitInjec.push((Math.round(calcul*100)/100)) ;
+        valueDebitInjec.push((Math.round(calcul*10)/10)) ;
     });
 
     for (let i = 0; i < tabConcentration.length; i++) {
@@ -118,7 +118,7 @@ function calculVolume(){
     let calcul;
     tabConcentration.forEach(element => {
         calcul = (valueDoseInjec / element)*1000;
-        valueVolume.push((Math.round(calcul*100)/100)) ;
+        valueVolume.push(Math.round(calcul)) ;
     });
 
     for (let i = 0; i < tabConcentration.length; i++) {
