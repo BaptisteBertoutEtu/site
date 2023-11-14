@@ -107,6 +107,13 @@ function setNaN(){
         document.getElementById(allVitesseInjec+element).innerText = "NaN";
         document.getElementById(allVolume+element).innerText = "NaN";
     });
+    examType.value = "";
+    patientType.value = "";
+    timeArriv.value = "";
+    valueTempsInjec = 0;
+    valueDebit = 0;
+    valueVitesseInjec = [];
+    valueVolume = [];
 }
 
 /**

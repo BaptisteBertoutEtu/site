@@ -7,15 +7,12 @@
 const tensionTube = document.getElementById("tension-tube-select");
 const inputWeight = document.querySelector(".weight");
 const doseInjec = document.getElementById("doseInjec");
-const debitInjec = document.getElementById("debitInjec");
 
 
 const tabConcentration = [300,320,350];
-const allDebitInjec = "debitInjec";
 const allVolume = "vol";
 
 let valueDoseInjec = 0;
-let valueDebitInjec = [];
 let valueVolume = [];
 
 let mapTension = new Map();
@@ -65,11 +62,13 @@ function notNull(temp) {
  */
 function setNaN(){
     inputWeight.value = "";
+    tensionTube.value = "";
     tabConcentration.forEach(element => {
-        document.getElementById(allDebitInjec+element).innerText = "NaN";
-        document.getElementById(allDoseInjec+element).innerText = "NaN";
+        document.getElementById(doseInjec.innerHTML = "NaN");
         document.getElementById(allVolume+element).innerText = "NaN";
     });
+    valueDoseInjec = 0;
+    valueVolume = [];
 }
 
 /**
@@ -79,7 +78,6 @@ function calculAll(){
     if(weightNotNull()){
         calculDoseInjec();
         calculVolume();
-        calculDebitInjec();
     }
 }
 
@@ -94,21 +92,7 @@ function calculDoseInjec() {
     doseInjec.innerHTML = valueDoseInjec;
 }
 
-/**
- * Méthode {@code calculVitesse} permettant de calculer les valeurs de la vitesse d'injection et de les affichées aux endroits adéquat.
- */
-function calculDebitInjec(){
-    valueDebitInjec.length = 0;
-    let calcul;
-    valueVolume.forEach(element => {
-        calcul = element / 30;
-        valueDebitInjec.push((Math.round(calcul*10)/10)) ;
-    });
 
-    for (let i = 0; i < tabConcentration.length; i++) {
-        document.getElementById(allDebitInjec+tabConcentration[i]).innerText = valueDebitInjec[i];
-    }
-}
 
 /**
  * Méthode {@code calculVolume} permettant de calculer les valeurs du volume et de les affichées aux endroits adéquat.
@@ -118,33 +102,11 @@ function calculVolume(){
     let calcul;
     tabConcentration.forEach(element => {
         calcul = (valueDoseInjec / element)*1000;
+        calcul -= (calcul*20)/100;
         valueVolume.push(Math.round(calcul)) ;
     });
 
     for (let i = 0; i < tabConcentration.length; i++) {
         document.getElementById(allVolume+tabConcentration[i]).innerText = valueVolume[i];
     }
-}
-
-/**
- * Méthode {@code changeValueDebit} permettant de changer la valeur du temps d'arrivé selon la valeur du choix d'examen.
- * Les valeurs sont définit dans la Map {@code mapExamen}.
- */
-function changeValueTempsArriv(){
-    let index = examType.selectedIndex;
-    let valueExam = examType.options[index].value;
-    if(valueExam != "embolie" && valueExam != "") {
-        patientType.disabled = true;
-        patientType.value = "normal";
-    }
-    else if(valueExam == ""){
-        patientType.value = "";
-        patientType.disabled = false;
-    }
-    else {
-        patientType.disabled = false;
-        patientType.value = "";
-    }
-    changeValueDebit();
-    document.getElementById("tempsArriv").value = mapExam.get(valueExam);
 }

@@ -4,10 +4,9 @@
  */
 
 html{
-    background-image: url("https://imao.fr/wp-content/uploads/2017/06/path.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(180, 245, 255, 0.301);
     height: 90%;
+    overflow: hidden;
 }
 
 .main-tab{
@@ -124,4 +123,9 @@ input{
 footer{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.reset{
+    width: fit-content;
+    margin: 0 auto;
 }
