@@ -26,7 +26,7 @@ mapTension.set("120",0.5);
  * Elle permet de calculer les différentes valeurs.
  */
 function calculer() {
-    if( !tensionNotNull()) setNaN();
+    if( !weightNotNull()) setNaN();
     else calculAll();
 }
 
@@ -36,16 +36,16 @@ function calculer() {
  */
 function tensionNotNull(){
     let index = tensionTube.selectedIndex;
-    let bool = notNull(tensionTube.options[index].value);
-    if (!bool) {
-        tensionTube.focus();
-        alert("Remplir les paramètres")
-    }
-    return bool;
+    return notNull(tensionTube.options[index].value);
 }
 
 function weightNotNull(){
-    return notNull(inputWeight.value);
+    let bool = notNull(inputWeight.value);
+    if (!bool && tensionNotNull()) {
+        inputWeight.focus();
+        alert("Veuillez remplir le poids du patient")
+    }
+    return bool;
 }
 
 /**
@@ -81,6 +81,11 @@ function calculAll(){
     }
 }
 
+function calculOnKeyUp(){
+    calculDoseInjec();
+    calculVolume();
+}
+
 /**
  * Méthode {@code calculTempInjec} permettant de calculer le temps d'injection et de les affichées aux endroits adéquat.
  */
@@ -102,7 +107,7 @@ function calculVolume(){
     let calcul;
     tabConcentration.forEach(element => {
         calcul = (valueDoseInjec / element)*1000;
-        calcul -= (calcul*20)/100;
+        calcul -= (calcul*15)/100;
         valueVolume.push(Math.round(calcul)) ;
     });
 
