@@ -8,7 +8,9 @@ const r = document.getElementById("realisations").offsetTop;
 const conta = document.getElementById("contact").offsetTop;
 let lastHightLight = "h"
 
-window.onscroll = changeHightLightOnScroll();
+window.onscroll = () => {
+    changeHightLightOnScroll();
+} 
 
 function changeHightLightOnScroll(){
     int = window.scrollY;

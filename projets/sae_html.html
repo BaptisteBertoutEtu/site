@@ -13,8 +13,8 @@
         <div id="view-bar"></div>
 
         
-        <div class="menu">
-            <a href="../index.html" class="to-moove refresh" >
+        <div class="menu to-moove">
+            <a href="../index.html" class="refresh" >
                 <div class="header-left link-header" href="../index.html">
                     <div class="image">
                         <img class="avatar image-header" src="../images/photo.png" alt="avatar">
@@ -27,57 +27,74 @@
             
             
             <div class="header-right">
-                <div class="link-header-right to-moove" >
+                <div class="link-header-right" >
                     <a href="../index.html" class="link-header">Accueil</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
+                <div class="separator" ></div>
+                <div class="link-header-right" >
                     <a href="../index.html#formations" class="link-header">Formations</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
+                <div class="separator" ></div>
+                <div class="link-header-right" >
                     <a href="../index.html#competences" class="link-header">Comp&eacute;tences</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
+                <div class="separator" ></div>
+                <div class="link-header-right" >
                     <a href="../index.html#experiences" class="link-header">Exp&eacute;riences</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
+                <div class="separator" ></div>
+                <div class="link-header-right" >
                     <a href="../index.html#realisations" class="link-header">R&eacute;alisations</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
+                <div class="separator" ></div>
+                <div class="link-header-right" >
                     <a href="../index.html#contact" class="link-header">Contact</a>
-                </div>
-                <div class="separator to-moove" ></div>
-                <div>
-                    <div class="container-hamburger">
-                        <div class="hamburger">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="begin">
-            <div class="text project-title bottom-border">
-                Apple Mobility
-            </div>
-
-            <div class="text project-presentation">
-                Apple Mobility est un projet de premier semestre visant &agrave; nous faire utiliser HTML/CSS pour cr&eacute;er
-                une platforme permettant une meilleure mobilit&eacute; au sein de l'entreprise choisit.  
-                La plateforme permet la location de véhicules électriques, de trottinettes, et d'autres moyens de locomotion
-                et favorise le covoiturage entre collègues, tout en intégrant des options de location directe à l'entreprise.
-            </div>
+        <div class="menu-projet to-moove-left">
+            <div class="space"></div>
             <div>
-                <a href="https://github.com/BaptisteBertoutEtu/BUTS1/tree/4e0053a885bd63ca789713c88b12152d40ad6cf2/ALL_SAE/sae_105%20_06/WP_F06" target="_blank" id="button">
-                    <p class="mini-button link-to-project" >Lien vers le projet</p>
-                </a>
+                <a href="#home" class="link-header set-hightlight" id="h" onclick="changeHightLight('h')">Acceuil du projet</a>
+            </div>
+            <div class="separator-horizontal"></div>
+            <div>
+                <a href="#presentation" class="link-header" id="p" onclick="changeHightLight('p')">Présentation</a>
+            </div>
+            <div class="separator-horizontal"></div>
+            <div>
+                <a href="#image" class="link-header" id="i" onclick="changeHightLight('i')">Image(s)</a>
+            </div>
+            <div class="space"></div>
+        </div>
+
+        <div class="container-hamburger">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        
+        <div class="begin" id="home">
+            <div class="content-begin">
+
+                <div class="text project-title bottom-border">
+                    Apple Mobility
+                </div>
+
+                <div class="text project-presentation">
+                    Apple Mobility est un projet de premier semestre visant &agrave; nous faire utiliser HTML/CSS pour cr&eacute;er
+                    une platforme permettant une meilleure mobilit&eacute; au sein de l'entreprise choisit.  
+                    La plateforme permet la location de véhicules électriques, de trottinettes, et d'autres moyens de locomotion
+                    et favorise le covoiturage entre collègues, tout en intégrant des options de location directe à l'entreprise.
+                </div>
+                <div>
+                    <a href="https://github.com/BaptisteBertoutEtu/BUTS1/tree/4e0053a885bd63ca789713c88b12152d40ad6cf2/ALL_SAE/sae_105%20_06/WP_F06" target="_blank" id="button">
+                        <p class="mini-button link-to-project" >Lien vers le projet</p>
+                    </a>
+                </div>
             </div>
             <div class="go-bottom">
                 <a href="#presentation" class="link-to-bottom" onclick="changeHightLight('f')">
@@ -92,13 +109,18 @@
             </div>
         </div>
 
-        <div class="div-sep"></div>
 
         <div class="presentation_complete" id="presentation">
+            <div class="entete">
+                <div class="text title without-margin-bottom">
+                    <p>Pr&eacute;sentation</p>
+                    <hr class="hr-title">
+                </div>
+            </div>
             <div class="content_presentation">
                 <img src="../images/image_projet_html/page_sae_html.png" alt="image principale sae html" class="value_image_projet">
                 <div class="set-margin-top">
-                    <p class="mini-title text bottom-border set-margin-bottom">Pr&eacute;sentation</p>
+                    <p class="mini-title text bottom-border set-margin-bottom">Pr&eacute;sentation du projet</p>
                     <p class="text disable-margin-bottom text-presentation">Lors de cette SAE, nous devions en premier lieu, imaginer une platforme permettant aux employ&eacute;s d'une entreprise
                         d'avoir acc&egrave;s &agrave; une certaine mobilit&eacute;. En effet, nous devions faire en sorte que les employ&eacute;s puissent louer un v&eacute;hicule, que ce soit &agrave; moteur ou non, choisir un covoiturage ou proposer un covoiturage.<br><br>
     
@@ -129,48 +151,44 @@
             </div>
         </div>
 
-        <div class="div-sep"></div>
-
-        <div class="project-video">
-            <div class="content_video set-margin-top">
-                <div class="set-margin-bottom">
-                    <p class="mini-title bottom-border text">Vid&eacute;o de pr&eacute;sentation</p>
-                </div>
-                <div class="video">
-                    <iframe width="885" height="498" src="https://www.youtube.com/embed/3GPZhgFiwD8" title="vid&eacute;o pr&eacute;sentation projet mobilit&eacute;" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="all-image" id="image">
+            <div class="entete">
+                <div class="text title without-margin-bottom">
+                    <p>Image(s)</p>
+                    <hr class="hr-title">
                 </div>
             </div>
-        </div>
-
-        <div class="div-sep"></div>
-
-        <div class="all-image">
             <div class="content_image">
-                <div class="set-margin-top set-margin-bottom">
-                    <p class="mini-title bottom-border text">Image de pr&eacute;sentation</p>
-                </div>
-                <div class="images">
-                    <img src="../images/image_projet_html/menu.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/covoit.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/loca_loco.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/loca_elec.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/contac.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/poli.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/connect.png" alt="" class="image_present">
-                    <img src="../images/image_projet_html/hitoric.png" alt="" class="image_present">
+                <div class="navigable">
+                    <input type="button" onclick="imagePrecedente('../images/image_projet_html/image',1)" class="button-nav mini" value="&#10216;">
+                    <div class="images">
+                        <img src="../images/image_projet_html/image1.png" alt="" class="image_present" id="change-image">
+                    </div>
+                    <input type="button" onclick="imageSuivante('../images/image_projet_html/image',8)" class="button-nav" value="&#10217;">
                 </div>
             </div>
+
+            <div class="circle-nav">
+                <input type="button" onclick="changeImage('../images/image_projet_html/image1.png',1)" class="one-circle selected-circle" id="circle-1"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image2.png',2)" class="one-circle" id="circle-2"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image3.png',3)" class="one-circle" id="circle-3"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image4.png',4)" class="one-circle" id="circle-4"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image5.png',5)" class="one-circle" id="circle-5"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image6.png',6)" class="one-circle" id="circle-6"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image7.png',7)" class="one-circle" id="circle-7"></input>
+                <input type="button" onclick="changeImage('../images/image_projet_html/image8.png',8)" class="one-circle" id="circle-8"></input>
+            </div>
+        
             <div class="back">
-                <a href="../index.html#projet_html" id="button" class="button_back">
-                    <div>
-                        <p class="mini-button">Retourner au projet</p>
-                    </div>
+                <a href="../index.html#realisation_html" id="button" class="button_back">
+                    <p class="mini-button">Retourner au projet</p>
                 </a>
             </div>
         </div>
 
 
     <script src="../js/script.js"></script>
+    <script src="../js/script-image.js"></script>
+    <script src="../js/script-hightlight-projet.js"></script>
 </body>
 </html>

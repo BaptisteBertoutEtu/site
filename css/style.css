@@ -18,8 +18,6 @@ body::-webkit-scrollbar{
     display: none;
 }
 
--web
-
 .div-sep{
     border-bottom: solid rgba(0, 0, 0, 0.3) 1px;
     border-image: radial-gradient(hsla(0, 0%, 100%, 0.443),hsl(272, 90%, 10%)) 1;
@@ -47,10 +45,10 @@ body::-webkit-scrollbar{
     display: flex;
     position: fixed;
     width: 100%;
+    z-index: 1;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    transition: all 0.3s ease-in-out;
 }
 
 .refresh:active{
@@ -65,8 +63,16 @@ body::-webkit-scrollbar{
     transition: transform 1s ease-in-out;
 }
 
+.to-moove-left{
+    transition: transform 1s ease-in-out;
+}
+
 .all-menu-active{
     transform: translateY(-70px);
+}
+
+.all-menu-active-left{
+    transform: translateX(-250px);
 }
 
 .background-to-none{
@@ -95,6 +101,7 @@ body::-webkit-scrollbar{
 
 .header-right{
     display: flex;
+    transform: translateX(-10%);
     flex-direction: row;
     align-items: center;
 }
@@ -108,15 +115,28 @@ body::-webkit-scrollbar{
     font-size: 15px;
     color: white;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
 }
 
-.link-header:hover, .set-hightlight{
+.link-header:hover, .link-projet:hover, .set-hightlight{
     text-shadow:
         0 0 7px #fff,
         0 0 10px hsl(330, 85%, 49%),
         0 0 42px hsl(330, 85%, 49%);
 
+}
+
+.menu-projet{
+    background: linear-gradient(to right, hsl(272, 90%, 10%),hsla(272, 88%, 10%, 0.8),hsla(272, 88%, 10%, 0.6), hsla(272, 88%, 10%, 0.4),hsla(272, 88%, 10%, 0));
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    z-index: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.space{
+    height: 15vh;
 }
 
 .croix-menu{
@@ -130,9 +150,20 @@ body::-webkit-scrollbar{
     height: 40px;
 }
 
+.separator-horizontal{
+    border: solid rgba(0, 0, 0, 0.3) 1px;
+    border-image: radial-gradient(#ffffff71,rgba(0, 0, 0, 0.1)) 1;
+    width: 90%;
+    align-self: center;
+}
+
 .container-hamburger{
     width: 100px;
+    position: fixed;
+    top: 2%;
+    right: 0.5%;
     display: flex;
+    z-index: 2;
     justify-content: space-around;
 }
 
@@ -312,6 +343,7 @@ body::-webkit-scrollbar{
 .entete{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .title{

@@ -1,5 +1,6 @@
 const burger = document.querySelector('.hamburger');
 const to_moove = document.querySelectorAll('.to-moove');
+const to_moove_left = document.querySelectorAll('.to-moove-left');
 const menu = document.querySelector('.menu');
 
 window.onload = () => {
@@ -28,6 +29,10 @@ burger.addEventListener('click', () => {
         e.classList.toggle('all-menu-active');
     });
 
+    to_moove_left.forEach((e) => {
+        e.classList.toggle('all-menu-active-left');
+    });
+
     menu.classList.toggle('background-to-none');
     
 });
@@ -46,6 +51,10 @@ function setMenu() {
             to_moove.forEach((e) => {
                 e.classList.add('all-menu-active');
             });
+
+            to_moove_left.forEach((e) => {
+                e.classList.add('all-menu-active-left');
+            });
     
             menu.classList.add('background-to-none');
         }
@@ -60,6 +69,10 @@ function setMenu() {
     
             to_moove.forEach((e) => {
                 e.classList.remove('all-menu-active');
+            });
+
+            to_moove_left.forEach((e) => {
+                e.classList.remove('all-menu-active-left');
             });
     
             menu.classList.remove('background-to-none');
