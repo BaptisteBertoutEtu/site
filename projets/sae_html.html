@@ -4,20 +4,23 @@
         <title>Projet HTML</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/style-projet.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/style-projet.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="../images/photo.png"/>
         
     </head>
     <body>
+        <div id="view-bar"></div>
+
+        
         <div class="menu">
             <a href="../index.html" class="to-moove refresh" >
                 <div class="header-left link-header" href="../index.html">
                     <div class="image">
                         <img class="avatar image-header" src="../images/photo.png" alt="avatar">
                     </div>
-                    <div class="name-surname-header">
-                        <span class="name-surname-value">Baptiste BERTOUT</span>
+                    <div class="potfolio-header">
+                        <span class="portfolio-value">Portfolio</span>
                     </div>
                 </div>
             </a>
@@ -25,22 +28,30 @@
             
             <div class="header-right">
                 <div class="link-header-right to-moove" >
-                    <a href="../index.html#acceuil" class="link-header">Acceuil</a>
+                    <a href="../index.html" class="link-header">Accueil</a>
                 </div>
                 <div class="separator to-moove" ></div>
                 <div class="link-header-right to-moove" >
-                    <a href="../index.html#A_propos_de_moi" class="link-header">A propos de moi</a>
+                    <a href="../index.html#formations" class="link-header">Formations</a>
                 </div>
                 <div class="separator to-moove" ></div>
                 <div class="link-header-right to-moove" >
-                    <a href="../index.html#projets" class="link-header">Mes projets</a>
+                    <a href="../index.html#competences" class="link-header">Comp&eacute;tences</a>
+                </div>
+                <div class="separator to-moove" ></div>
+                <div class="link-header-right to-moove" >
+                    <a href="../index.html#experiences" class="link-header">Exp&eacute;riences</a>
+                </div>
+                <div class="separator to-moove" ></div>
+                <div class="link-header-right to-moove" >
+                    <a href="../index.html#realisations" class="link-header">R&eacute;alisations</a>
                 </div>
                 <div class="separator to-moove" ></div>
                 <div class="link-header-right to-moove" >
                     <a href="../index.html#contact" class="link-header">Contact</a>
                 </div>
                 <div class="separator to-moove" ></div>
-                <div class="link-header-right">
+                <div>
                     <div class="container-hamburger">
                         <div class="hamburger">
                             <div class="bar"></div>
@@ -53,41 +64,52 @@
         </div>
 
         <div class="begin">
-            <div class="content-begin">
-                <div class="text project-title bottom-border">
-                    Apple Mobility
-                </div>
+            <div class="text project-title bottom-border">
+                Apple Mobility
+            </div>
 
-                <div class="text project-presentation">
-                    Apple Mobility est un projet de premier semestre visant &agrave; nous faire utiliser HTML/CSS pour cr&eacute;er
-                    une platforme permettant une meilleure mobilit&eacute; au sein de l'entreprise choisit.
-                </div>
-                <div>
-                    <a href="https://github.com/BaptisteBertoutEtu/BUTS1/tree/4e0053a885bd63ca789713c88b12152d40ad6cf2/ALL_SAE/sae_105%20_06/WP_F06" target="_blank" id="button">
-                        <p class="mini-button link-to-project" >Lien vers le projet</p>
-                    </a>
-                </div>
+            <div class="text project-presentation">
+                Apple Mobility est un projet de premier semestre visant &agrave; nous faire utiliser HTML/CSS pour cr&eacute;er
+                une platforme permettant une meilleure mobilit&eacute; au sein de l'entreprise choisit.  
+                La plateforme permet la location de véhicules électriques, de trottinettes, et d'autres moyens de locomotion
+                et favorise le covoiturage entre collègues, tout en intégrant des options de location directe à l'entreprise.
+            </div>
+            <div>
+                <a href="https://github.com/BaptisteBertoutEtu/BUTS1/tree/4e0053a885bd63ca789713c88b12152d40ad6cf2/ALL_SAE/sae_105%20_06/WP_F06" target="_blank" id="button">
+                    <p class="mini-button link-to-project" >Lien vers le projet</p>
+                </a>
+            </div>
+            <div class="go-bottom">
+                <a href="#presentation" class="link-to-bottom" onclick="changeHightLight('f')">
+                    <img src="../images/to-bottom.png" alt="to top" class="bottom-up">
+                </a>
+            </div>
+
+            <div class="go-up set-incative">
+                <a href="#home" class="link-to-up" onclick="changeHightLight('h')">
+                    <img src="../images/to-top.png" alt="to bottom" class="bottom-up">
+                </a>
             </div>
         </div>
 
         <div class="div-sep"></div>
 
-        <div class="presentation_complete">
+        <div class="presentation_complete" id="presentation">
             <div class="content_presentation">
                 <img src="../images/image_projet_html/page_sae_html.png" alt="image principale sae html" class="value_image_projet">
                 <div class="set-margin-top">
                     <p class="mini-title text bottom-border set-margin-bottom">Pr&eacute;sentation</p>
-                    <p class="text disable-margin-bottom">Lors de cette SAE, nous devions en premier lieu, imaginer une platforme permettant aux employ&eacute;s d'une entreprise
+                    <p class="text disable-margin-bottom text-presentation">Lors de cette SAE, nous devions en premier lieu, imaginer une platforme permettant aux employ&eacute;s d'une entreprise
                         d'avoir acc&egrave;s &agrave; une certaine mobilit&eacute;. En effet, nous devions faire en sorte que les employ&eacute;s puissent louer un v&eacute;hicule, que ce soit &agrave; moteur ou non, choisir un covoiturage ou proposer un covoiturage.<br><br>
     
-                        Pour r&eacute;aliser cette platforme, nous avons utilis&eacute; pour la premi&egrave;re fois, WordPress, qui nous a permis de mettre en oeuvre nos id&eacute;es
+                        Pour r&eacute;aliser cette platforme, nous avons utilis&eacute; pour la premi&egrave;re fois, <a href="https://www.wordpress.com/" class="link-in-text bottom-border">Wordpress</a>, qui nous a permis de mettre en oeuvre nos id&eacute;es
                         en cr&eacute;ant une maquette.<br><br>
     
                         Suite &agrave; cela, nous avons repris la maquette pour la recr&eacute;er enti&egrave;rement en HTML/CSS.<br><br>
                     
                         Comme vous pouvez le voir si vous regardez les pages HTML, aucun &eacute;l&eacute;ment n'est int&eacute;ractif, en effet, nous avions comme consigne
                         de faire une platforme totalement sans interaction, car nous n'avions pas encore les comp&eacute;tences, du moins, pas la totalit&eacute; des &eacute;tudiants.
-                        C'est pourquoi les diff&eacute;rents formulaires, la Connexion, l'inscription ou encore l'historique sont purement est&eacute;thique.
+                        C'est pourquoi les diff&eacute;rents formulaires, la connexion, l'inscription ou encore l'historique sont purement est&eacute;thique.
                     </p>
                 </div>
                 <div class="set-margin-top set-margin-bottom">

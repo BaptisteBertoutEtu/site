@@ -19,14 +19,11 @@ window.onscroll = function() {myFunction()};
  
 function myFunction() {
     var x = document.documentElement.scrollTop;
-    let scrollUp = document.querySelector(".go-up");
     if (!isActiveManual()) {
         if ( x > 650) {
             burger.classList.add('menu-active');
             burger.classList.add('auto-active');
             burger.classList.remove('auto-desactive');
-            scrollUp.classList.add("set-active");
-            scrollUp.classList.remove("set-inactive");
     
             to_moove.forEach((e) => {
                 e.classList.add('all-menu-active');
@@ -39,9 +36,6 @@ function myFunction() {
             burger.classList.remove('manual-active');
             burger.classList.remove('auto-active');
             burger.classList.add('auto-desactive');
-
-            scrollUp.classList.remove("set-active");
-            scrollUp.classList.add("set-inactive");
     
             to_moove.forEach((e) => {
                 e.classList.remove('all-menu-active');

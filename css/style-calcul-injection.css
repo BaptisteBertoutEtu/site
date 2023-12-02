@@ -40,7 +40,7 @@ table{
     font-size: 20px;
 }
 
-.other-line:nth-child(3n){
+.other-line:nth-child(1n){
     background-color: white;
 }
 
