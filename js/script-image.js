@@ -2,30 +2,38 @@
 let cpt=1;
 let lastCpt = cpt;
 
-function imageSuivante(path, max){
-    if(cpt+1 <= max){
-        document.getElementById("circle-"+cpt).classList.remove("selected-circle");
-        cpt++;
-        lastCpt = cpt;
-        document.getElementById("circle-"+cpt).classList.add("selected-circle");
-        changeImage(path + cpt + ".png", cpt);
-    }
+let min;
+let max;
+let path;
+
+function imageSuivante(){
+    document.getElementById("circle-"+cpt).classList.remove("selected-circle");
+    cpt = (cpt+1 <= max ? cpt+1 : 1);
+    lastCpt = cpt;
+    changeImage(path + cpt + ".png", cpt);
 }
 
-function imagePrecedente(path, min){
-    if(cpt-1 >= min){
-        document.getElementById("circle-"+cpt).classList.remove("selected-circle");
-        cpt--;
-        lastCpt = cpt;
-        document.getElementById("circle-"+cpt).classList.add("selected-circle");
-        changeImage(path + cpt + ".png", cpt);
-    }
+function imagePrecedente(){
+    document.getElementById("circle-"+cpt).classList.remove("selected-circle");
+    cpt = (cpt-1 >= min ? cpt-1 : max);
+    lastCpt = cpt;
+    changeImage(path + cpt + ".png", cpt);
 }
 
-function changeImage(path, currentCpt){
+function changeImage(pathForImage,currentCpt){
     document.getElementById("circle-"+lastCpt).classList.remove("selected-circle");
     lastCpt = currentCpt;
     cpt = currentCpt;
-    document.getElementById("change-image").src = path;
+    document.getElementById("change-image").src = pathForImage;
     document.getElementById("circle-"+currentCpt).classList.add("selected-circle");
+}
+
+function changeImageButton(currentCpt){
+    changeImage(path,currentCpt);
+}
+
+function setMinMaxPath(minimum, maximum, pathForImage){
+    min = minimum;
+    max = maximum;
+    path = pathForImage;
 }

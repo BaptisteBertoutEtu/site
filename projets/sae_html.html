@@ -160,23 +160,25 @@
             </div>
             <div class="content_image">
                 <div class="navigable">
-                    <input type="button" onclick="imagePrecedente('../images/image_projet_html/image',1)" class="button-nav mini" value="&#10216;">
+                    <input type="button" onclick="imagePrecedente()" class="button-nav mini" value="&#10216;">
                     <div class="images">
                         <img src="../images/image_projet_html/image1.png" alt="" class="image_present" id="change-image">
                     </div>
-                    <input type="button" onclick="imageSuivante('../images/image_projet_html/image',8)" class="button-nav" value="&#10217;">
+                    <input type="button" onclick="imageSuivante()" class="button-nav" value="&#10217;">
                 </div>
             </div>
 
             <div class="circle-nav">
-                <input type="button" onclick="changeImage('../images/image_projet_html/image1.png',1)" class="one-circle selected-circle" id="circle-1"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image2.png',2)" class="one-circle" id="circle-2"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image3.png',3)" class="one-circle" id="circle-3"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image4.png',4)" class="one-circle" id="circle-4"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image5.png',5)" class="one-circle" id="circle-5"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image6.png',6)" class="one-circle" id="circle-6"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image7.png',7)" class="one-circle" id="circle-7"></input>
-                <input type="button" onclick="changeImage('../images/image_projet_html/image8.png',8)" class="one-circle" id="circle-8"></input>
+                <input type="button" onclick="changeImageButton(1)" class="one-circle selected-circle" id="circle-1"></input>
+                <input type="button" onclick="changeImageButton(2)" class="one-circle" id="circle-2"></input>
+                <input type="button" onclick="changeImageButton(3)" class="one-circle" id="circle-3"></input>
+                <input type="button" onclick="changeImageButton(4)" class="one-circle" id="circle-4"></input>
+                <input type="button" onclick="changeImageButton(5)" class="one-circle" id="circle-5"></input>
+                <input type="button" onclick="changeImageButton(6)" class="one-circle" id="circle-6"></input>
+                <input type="button" onclick="changeImageButton(7)" class="one-circle" id="circle-7"></input>
+                <input type="button" onclick="changeImageButton(8)" class="one-circle" id="circle-8"></input>
+
+
             </div>
         
             <div class="back">
@@ -189,6 +191,6 @@
 
     <script src="../js/script.js"></script>
     <script src="../js/script-image.js"></script>
-    <script src="../js/script-hightlight-projet.js"></script>
+    <script src="../js/script-hightlight-projet.js"  onload="setMinMaxPath(1,8,'../images/image_projet_html/image')"></script>
 </body>
 </html>

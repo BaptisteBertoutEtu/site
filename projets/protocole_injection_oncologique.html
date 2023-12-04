@@ -10,49 +10,70 @@
         
     </head>
     <body>
-        <div class="menu">
-            <a href="../index.html" class="to-moove refresh" >
+        <div id="view-bar"></div>
+
+        
+        <div class="menu to-moove">
+            <a href="../index.html" class="refresh" >
                 <div class="header-left link-header" href="../index.html">
                     <div class="image">
                         <img class="avatar image-header" src="../images/photo.png" alt="avatar">
                     </div>
-                    <div class="name-surname-header">
-                        <span class="name-surname-value">Baptiste BERTOUT</span>
+                    <div class="potfolio-header">
+                        <span class="portfolio-value">Portfolio</span>
                     </div>
                 </div>
             </a>
             
             
             <div class="header-right">
-                <div class="link-header-right to-moove" >
-                    <a href="../index.html#acceuil" class="link-header">Acceuil</a>
+                <div class="link-header-right" >
+                    <a href="../index.html" class="link-header">Accueil</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
-                    <a href="../index.html#A_propos_de_moi" class="link-header">A propos de moi</a>
+                <div class="separator" ></div>
+                <div class="link-header-right" >
+                    <a href="../index.html#formations" class="link-header">Formations</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
-                    <a href="../index.html#projets" class="link-header">Mes projets</a>
+                <div class="separator" ></div>
+                <div class="link-header-right" >
+                    <a href="../index.html#competences" class="link-header">Comp&eacute;tences</a>
                 </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right to-moove" >
+                <div class="separator" ></div>
+                <div class="link-header-right" >
+                    <a href="../index.html#experiences" class="link-header">Exp&eacute;riences</a>
+                </div>
+                <div class="separator" ></div>
+                <div class="link-header-right" >
+                    <a href="../index.html#realisations" class="link-header">R&eacute;alisations</a>
+                </div>
+                <div class="separator" ></div>
+                <div class="link-header-right" >
                     <a href="../index.html#contact" class="link-header">Contact</a>
-                </div>
-                <div class="separator to-moove" ></div>
-                <div class="link-header-right">
-                    <div class="container-hamburger">
-                        <div class="hamburger">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="begin">
+        <div class="menu-projet to-moove-left">
+            <div class="space"></div>
+            <div>
+                <a href="#home" class="link-header set-hightlight" id="h" onclick="changeHightLight('h')">Acceuil du projet</a>
+            </div>
+            <div class="separator-horizontal"></div>
+            <div>
+                <a href="#presentation" class="link-header" id="p" onclick="changeHightLight('p')">Présentation</a>
+            </div>
+            <div class="space"></div>
+        </div>
+
+        <div class="container-hamburger">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <div class="begin" id="home">
             <div class="content-begin">
                 <div class="text project-title bottom-border">
                     Protocole d'injection oncologique
@@ -78,11 +99,23 @@
                     </a>
                 </div>
             </div>
+
+            <div class="go-bottom">
+                <a href="#presentation" class="link-to-bottom" onclick="changeHightLight('p')">
+                    <img src="../images/to-bottom.png" alt="to top" class="bottom-up">
+                </a>
+            </div>
+
+            <div class="go-up set-incative">
+                <a href="#home" class="link-to-up" onclick="changeHightLight('h')">
+                    <img src="../images/to-top.png" alt="to bottom" class="bottom-up">
+                </a>
+            </div>
         </div>
 
         <div class="div-sep"></div>
 
-        <div class="presentation_complete">
+        <div class="presentation_complete" id="presentation">
             <div class="content_presentation">
                 <img src="../images/image_projet_protocole_oncologique/affiche_projet_protocole.png" alt="image principale sae html" class="value_image_projet">
                 <div class="set-margin-top">
@@ -129,5 +162,7 @@
 
 
     <script src="../js/script.js"></script>
+    <script src="../js/script-hightlight-projet.js"></script>
+
 </body>
 </html>

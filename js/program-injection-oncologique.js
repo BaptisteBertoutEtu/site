@@ -9,7 +9,7 @@ const inputWeight = document.querySelector(".weight");
 const doseInjec = document.getElementById("doseInjec");
 
 
-const tabConcentration = [300,320,350];
+const tabConcentration = [300,320,350,370,400];
 const allVolume = "vol";
 
 let valueDoseInjec = 0;

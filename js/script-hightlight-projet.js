@@ -2,7 +2,13 @@ let int;
 
 const h = document.getElementById("home").offsetTop;
 const p = document.getElementById("presentation").offsetTop;
-const i = document.getElementById("image").offsetTop;
+let i;
+try {
+    i = document.getElementById("image").offsetTop;
+} catch (error) {
+    i = null;
+}
+
 let lastHightLight = "h"
 
 window.onscroll = () => {
@@ -15,7 +21,10 @@ function changeHightLightOnScroll(){
     if(int < p){
         changeHightLight("h");
     }
-    else if(int >= p && int < i){
+    else if(int >= p && i!=null && int < i){
+        changeHightLight("p");
+    }
+    else if(int >= p && i==null){
         changeHightLight("p");
     }
     else{
@@ -24,7 +33,11 @@ function changeHightLightOnScroll(){
 }
 
 function changeHightLight(elem){
-    document.getElementById(lastHightLight).classList.remove("set-hightlight");
-    document.getElementById(elem).classList.add("set-hightlight");
-    lastHightLight = elem;
+    try {
+        document.getElementById(lastHightLight).classList.remove("set-hightlight");
+        document.getElementById(elem).classList.add("set-hightlight");
+        lastHightLight = elem;
+    } catch (error) {
+        
+    }
 }
