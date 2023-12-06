@@ -25,7 +25,7 @@ function changeImage(pathForImage,currentCpt){
     lastCpt = currentCpt;
     cpt = currentCpt;
     document.getElementById("change-image").src = pathForImage;
-    document.getElementById("circle-"+currentCpt).classList.add("selected-circle");
+    document.getElementById("circle-"+currentCpt).classList.add("selected-circle");  
 }
 
 function changeImageButton(currentCpt){
