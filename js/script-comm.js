@@ -65,13 +65,13 @@ function isDesactiveAuto(){
 
 function copy_mail(){
     var text = document.getElementById("mail").innerHTML;
-    var doc =  document.getElementById("ok_mail");
+    var doc =  document.getElementById("ok-mail");
     copy(text,doc);
 }
 
 function copy_tel(){
     var text = document.getElementById("tel").innerHTML;
-    var doc =  document.getElementById("ok_tel");
+    var doc =  document.getElementById("ok-tel");
     copy(text,doc);
 }
 
