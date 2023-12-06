@@ -1,0 +1,550 @@
+/*ordinateur*/
+
+@media screen and (min-width: 1200px){
+
+    /* important*/
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        background-image: url("../images/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        min-height: 100%;
+        display: table;
+        width: 100%;
+    }
+
+    nav{
+        position: fixed;
+        left:0;
+        right: 0;
+        top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(140%) blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    nav a{
+        color: white;
+        text-decoration: none;
+        margin: 6px;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    nav img{
+        width: 45px;
+        height: 45px;
+    }
+
+    footer{
+        display: table-row;
+        background-color: whitesmoke;
+        z-index: 1;
+        text-align: center;
+        font-family:  Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    /* important*/
+
+
+
+
+    section,section h1,section p{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color:white;
+    }
+
+    section section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    section section>img{
+        width: 20%;
+        height: 100%;
+    }
+
+
+
+    .accueil{
+        position: relative;
+        width: 70%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+
+    .accueil a{
+        background-color: black;
+        text-align: center;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid white 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+
+    .accueil a:hover{
+        background-color: rgb(72, 72, 238);
+    }
+
+
+    .accueil h1{
+        text-align: center;
+        font-size: 4.6em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    .accueil p{
+        text-align: center;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+}
+
+/*tablette*/
+
+@media screen and (max-width: 1200px) and (min-width: 767px){
+
+    /* important*/
+    
+    html{
+        height: 100%;
+    }
+    
+    body{
+        background-image: url("../images/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        min-height: 100%;
+        display: table;
+        width: 100%;
+        font-size: 70%;
+    }
+    
+    nav{
+        position: fixed;
+        left:0;
+        right: 0;
+        top: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(140%) blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    .menu{
+        display: none;
+    }
+    
+    nav a{
+        color: white;
+        text-decoration: none;
+        margin: 6px;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    nav img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    footer{
+        display: table-row;
+        background-color: whitesmoke;
+        z-index: 1;
+        text-align: center;
+        font-family:  Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    /* important*/
+    
+    
+    
+    
+    section,section h1,section p{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color:white;
+    }
+    
+    section section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 25px;
+        margin-bottom: 32px;
+    }
+    
+    section section>img{
+        width: 25%;
+        height: 100%;
+    }
+    
+    
+    
+    .accueil{
+        position: relative;
+        width: 80%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+    
+    .accueil a{
+        background-color: black;
+        text-align: center;
+        font-size: 85%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid white 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+    
+    .accueil a:hover{
+        background-color: rgb(72, 72, 238,0.65);
+    }
+    
+    
+    .accueil h1{
+        text-align: center;
+        font-size: 4.4em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    .accueil p{
+        text-align: center;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 767px){
+
+    /* important*/
+    
+    html{
+        height: 100%;
+    }
+    
+    body{
+        background-image: url("../images/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        min-height: 100%;
+        display: table;
+        width: 100%;
+        font-size: 65%;
+    }
+    
+    nav{
+        position: fixed;
+        left:0;
+        right: 0;
+        top: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(140%) blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+    
+    nav a{
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    #page{
+        display: none;
+    }
+
+    .menu{
+        position: fixed;
+        left:0;
+        right: 0;
+        top: 57.5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(140%) blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+    
+    nav img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    footer{
+        display: table-row;
+        background-color: whitesmoke;
+        z-index: 1;
+        text-align: center;
+        font-family:  Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    /* important*/
+    
+    
+    
+    
+    section,section h1,section p{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color:white;
+    }
+    
+    section section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 29px;
+    }
+    
+    section section>img{
+        width: 30%;
+        height: 100%;
+    }
+    
+    
+    
+    .accueil{
+        position: relative;
+        width: 85%;
+        margin-top: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+    
+    .accueil a{
+        background-color: black;
+        text-align: center;
+        font-size: 95%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+        border: solid white 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+    
+    .accueil a:hover{
+        background-color: rgb(72, 72, 238,0.65);
+    }
+    
+    
+    .accueil h1{
+        text-align: center;
+        font-size: 3.9em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    .accueil p{
+        text-align: center;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+
+/* écran téléphone */
+@media screen and (max-width: 767px){
+    /* important*/
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        background-image: url("../images/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        font-size: 60%;
+        min-height: 100%;
+        display: table;
+        width: 100%;
+    }
+
+    nav{
+        position: fixed;
+        left:0;
+        right: 0;
+        top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(140%) blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    nav a{
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    #page{
+        display: none;
+    }
+
+    .menu{
+        position: fixed;
+        left:0;
+        right: 0;
+        top: 67px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(140%) blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    nav img{
+        width: 25px;
+        height: 25px;
+    }
+
+    footer{
+        display: table-row;
+        background-color: whitesmoke;
+        z-index: 1;
+        text-align: center;
+        font-family:  Karla,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    /* important*/
+
+
+
+
+    section,section h1,section p{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color:white;
+    }
+
+    section section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    section section>img{
+        width: 30%;
+        height: 100%;
+    }
+
+
+
+    .accueil{
+        position: relative;
+        width: 90%;
+        margin-top: 120px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+
+    .accueil a{
+        background-color: black;
+        text-align: center;
+        font-size: 85%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 7px;
+        border: solid white 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+
+    .accueil a:hover{
+        background-color: rgb(72, 72, 238);
+    }
+
+    .accueil h1{
+        text-align: center;
+        font-size:3em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+
+    .accueil p{
+        text-align: center;
+        font-family: Karla,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}

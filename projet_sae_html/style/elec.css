@@ -1,0 +1,196 @@
+@media screen and (min-width: 1200px){
+    .proposition{
+        width: 80%;
+        margin-top: 50px;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+    .proposition section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .proposition a{
+        border: solid 1px black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+        background-color: black;
+        text-align: center;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+
+    }
+
+    .proposition a:hover{
+        background-color: rgb(72, 72, 238);
+    }
+
+    .proposition img{
+        width: 30%;
+
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 767px){    
+    .proposition{
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+    .proposition section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .proposition a{
+        border: solid 1px black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+        background-color: black;
+        text-align: center;
+        font-size: 90%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+
+    .proposition a:hover{
+        background-color: rgb(72, 72, 238);
+    }
+
+    .proposition img{
+        width: 30%;
+
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 767px){
+    .proposition{
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+    .proposition section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .proposition a{
+        border: solid 1px black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+        background-color: black;
+        text-align: center;
+        font-size: 95%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+
+    .proposition a:hover{
+        background-color: rgb(72, 72, 238);
+    }
+
+    .proposition img{
+        width: 30%;
+
+    }
+}
+
+@media screen and (max-width: 767px){    
+    .proposition{
+        width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+    .proposition section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .proposition a{
+        border: solid 1px black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+        background-color: black;
+        text-align: center;
+        font-size: 90%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+    }
+
+    .proposition a:hover{
+        background-color: rgb(72, 72, 238);
+    }
+
+    .proposition img{
+        width: 30%;
+
+    }
+}

@@ -1,0 +1,172 @@
+@media screen and (min-width: 1200px){
+    section{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+    }
+    
+    section p{
+        border: solid 1px black;
+        border-radius: 10px;
+        width: auto;
+        background-color: rgba(101, 238, 101, 0.719);
+        padding: 20px;
+        color: rgb(39, 39, 39);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.459);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section a{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        margin-top: 10%;
+        background-color: black;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 767px){
+    section{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+    }
+    
+    section p{
+        border: solid 1px black;
+        border-radius: 10px;
+        width: auto;
+        font-size: 130%;
+        background-color: rgba(101, 238, 101, 0.719);
+        padding: 20px;
+        color: rgb(39, 39, 39);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.459);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section a{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-top: 10%;
+        background-color: black;
+        font-size: 95%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    
+    }
+}
+@media screen and (max-width: 850px) and (min-width: 767px){
+    section{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+    }
+    
+    section p{
+        border: solid 1px black;
+        border-radius: 10px;
+        width: auto;
+        font-size: 140%;
+        background-color: rgba(101, 238, 101, 0.719);
+        padding: 20px;
+        color: rgb(39, 39, 39);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.459);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section a{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        margin-top: 10%;
+        background-color: black;
+        font-size: 100%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    
+    }
+}
+@media screen and (max-width: 767px){
+    section{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+    }
+    
+    section p{
+        border: solid 1px black;
+        border-radius: 10px;
+        width: auto;
+        font-size: 140%;
+        background-color: rgba(101, 238, 101, 0.719);
+        padding: 20px;
+        color: rgb(39, 39, 39);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.459);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section a{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        margin-top: 10%;
+        background-color: black;
+        font-size: 90%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    
+    }
+}
+

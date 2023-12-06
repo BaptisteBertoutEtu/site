@@ -1,0 +1,231 @@
+@media screen and (min-width: 1200px){
+    .formulaire{
+        position: relative;
+        width: 70%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+    section form div{
+        padding: 50px;
+        font-size: 1.3em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section form div button{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        background-color: black;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    }
+    
+    section form div input{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    section form div select{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    
+    #required{
+        color:red;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 767px){    
+    .formulaire{
+        position: relative;
+        width: 80%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+    section form div{
+        padding: 50px;
+        font-size: 1.6em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section form div button{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        background-color: black;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    }
+    
+    section form div input{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    section form div select{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    
+    #required{
+        color:red;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 767px){
+    .formulaire{
+        position: relative;
+        width: 80%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+    section form div{
+        padding: 50px;
+        font-size: 1.6em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section form div button{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        background-color: black;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    }
+    
+    section form div input{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    section form div select{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    
+    #required{
+        color:red;
+    }
+}
+
+@media screen and (max-width: 767px){    
+    .formulaire{
+        position: relative;
+        width: 80%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+    }
+    section form div{
+        padding: 50px;
+        font-size: 1.4em;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+    }
+    
+    section form div button{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        background-color: black;
+        font-size: 75%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        padding: 9px;
+        border: solid black 1px;
+        border-radius: 15px;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0,0.7);
+    }
+    
+    section form div input{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    section form div select{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+    
+    
+    #required{
+        color:red;
+    }
+}

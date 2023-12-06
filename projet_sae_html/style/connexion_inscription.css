@@ -1,0 +1,212 @@
+@media screen and (min-width: 1200px){
+    form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 140%;
+        background-color: rgba(213, 213, 213, 0.815);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    input{
+        border: none;
+        background-color: rgba(238, 238, 238, 0.719);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 90%;
+        width: 100%;
+        border-radius: 7px;
+    }
+    
+    #submit{
+        background-color: black;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.688);
+        border-radius: 15px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+    
+    .inscription{
+        margin-top: 20px;
+    }
+    
+    .inscription a{
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        border: dashed black 1px;
+        color: rgb(85, 85, 85);
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 767px){
+    form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 180%;
+        background-color: rgba(213, 213, 213, 0.815);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    input{
+        border: none;
+        background-color: rgba(238, 238, 238, 0.719);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 90%;
+        width: 100%;
+        border-radius: 7px;
+    }
+    
+    #submit{
+        background-color: black;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.688);
+        border-radius: 15px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+    
+    .inscription{
+        margin-top: 20px;
+    }
+    
+    .inscription a{
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        border: dashed black 1px;
+        color: rgb(85, 85, 85);
+    }
+}
+@media screen and (max-width: 850px) and (min-width: 767px){
+    form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 180%;
+        background-color: rgba(213, 213, 213, 0.815);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    input{
+        border: none;
+        background-color: rgba(238, 238, 238, 0.719);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 90%;
+        width: 100%;
+        border-radius: 7px;
+    }
+    
+    #submit{
+        background-color: black;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.688);
+        border-radius: 15px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+    
+    .inscription{
+        margin-top: 20px;
+    }
+    
+    .inscription a{
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        border: dashed black 1px;
+        color: rgb(85, 85, 85);
+    }
+}
+@media screen and (max-width: 767px){
+    form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 180%;
+        background-color: rgba(213, 213, 213, 0.815);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    input{
+        border: none;
+        background-color: rgba(238, 238, 238, 0.719);
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 90%;
+        width: 100%;
+        border-radius: 7px;
+    }
+    
+    #submit{
+        background-color: black;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.688);
+        border-radius: 15px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+    
+    .inscription{
+        margin-top: 20px;
+    }
+    
+    .inscription a{
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        border: dashed black 1px;
+        color: rgb(85, 85, 85);
+    }
+}

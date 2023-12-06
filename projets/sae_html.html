@@ -80,22 +80,33 @@
         <div class="begin" id="home">
             <div class="content-begin">
 
-                <div class="text project-title bottom-border">
-                    Apple Mobility
+                <div class="project-title">
+                    <p class="text bottom-border">Apple Mobility</p>
                 </div>
 
-                <div class="text project-presentation">
-                    Apple Mobility est un projet de premier semestre visant &agrave; nous faire utiliser HTML/CSS pour cr&eacute;er
-                    une platforme permettant une meilleure mobilit&eacute; au sein de l'entreprise choisit.  
-                    La plateforme permet la location de v&eacute;hicules &eacute;lectriques, de trottinettes, et d'autres moyens de locomotion
-                    et favorise le covoiturage entre coll&egrave;gues, tout en int&eacute;grant des options de location directe &agrave; l'entreprise.
+                <div class="project-presentation">
+                    <p class="text">
+                        Apple Mobility est un projet de premier semestre visant &agrave; nous faire utiliser HTML/CSS pour cr&eacute;er
+                        une platforme permettant une meilleure mobilit&eacute; au sein de l'entreprise choisit.  
+                        La plateforme permet la location de v&eacute;hicules &eacute;lectriques, de trottinettes, et d'autres moyens de locomotion
+                        et favorise le covoiturage entre coll&egrave;gues, tout en int&eacute;grant des options de location directe &agrave; l'entreprise.
+                    </p>
                 </div>
-                <div>
+
+                <div class="all-link">
                     <a href="https://github.com/BaptisteBertoutEtu/BUTS1/tree/4e0053a885bd63ca789713c88b12152d40ad6cf2/ALL_SAE/sae_105%20_06/WP_F06" target="_blank" id="button">
+                        <p class="mini-button link-to-project" >Lien vers le GitHub</p>
+                    </a>
+
+                    <a href="../projet_sae_html/index.html" target="_blank" id="button" >
                         <p class="mini-button link-to-project" >Lien vers le projet</p>
                     </a>
+
                 </div>
+                
+                
             </div>
+
             <div class="go-bottom">
                 <a href="#presentation" class="link-to-bottom" onclick="changeHightLight('f')">
                     <img src="../images/to-bottom.png" alt="to top" class="bottom-up">
@@ -110,18 +121,24 @@
         </div>
 
 
-        <div class="presentation_complete" id="presentation">
+        <div class="presentation-complete" id="presentation">
+
             <div class="entete">
-                <div class="text title without-margin-bottom">
+                <div class="text title">
                     <p>Pr&eacute;sentation</p>
                     <hr class="hr-title">
                 </div>
             </div>
-            <div class="content_presentation">
-                <img src="../images/image_projet_html/page_sae_html.png" alt="image principale sae html" class="value_image_projet">
-                <div class="set-margin-top">
-                    <p class="mini-title text bottom-border set-margin-bottom">Pr&eacute;sentation du projet</p>
-                    <p class="text disable-margin-bottom text-presentation">Lors de cette SAE, nous devions en premier lieu, imaginer une platforme permettant aux employ&eacute;s d'une entreprise
+
+            <div class="content-presentation">
+                
+                <img src="../images/image_projet_html/page_sae_html.png" alt="image principale sae html" class="value-image-projet">
+                
+                <div class="div-sep"></div>
+                
+                <div class="value-presentation">
+                    <p class="mini-title text bottom-border ">Pr&eacute;sentation du projet</p>
+                    <p class="text text-presentation">Lors de cette SAE, nous devions en premier lieu, imaginer une platforme permettant aux employ&eacute;s d'une entreprise
                         d'avoir acc&egrave;s &agrave; une certaine mobilit&eacute;. En effet, nous devions faire en sorte que les employ&eacute;s puissent louer un v&eacute;hicule, que ce soit &agrave; moteur ou non, choisir un covoiturage ou proposer un covoiturage.<br><br>
     
                         Pour r&eacute;aliser cette platforme, nous avons utilis&eacute; pour la premi&egrave;re fois, <a href="https://www.wordpress.com/" class="link-in-text bottom-border">Wordpress</a>, qui nous a permis de mettre en oeuvre nos id&eacute;es
@@ -134,9 +151,10 @@
                         C'est pourquoi les diff&eacute;rents formulaires, la connexion, l'inscription ou encore l'historique sont purement est&eacute;thique.
                     </p>
                 </div>
-                <div class="set-margin-top set-margin-bottom">
+                <div class="div-sep"></div>
+                <div class="value-outils sect-skills">
                     <div>
-                        <p class="mini-title bottom-border text" id="set-margin-bottom">Outil(s) utilis&eacute;(s)</p>
+                        <p class="mini-title bottom-border text">Outil(s) utilis&eacute;(s)</p>
                     </div>
                     <div class="skills" id="button">
                         <p class="mini-button">HTML</p>
@@ -158,11 +176,11 @@
                     <hr class="hr-title">
                 </div>
             </div>
-            <div class="content_image">
+            <div class="content-image">
                 <div class="navigable">
                     <input type="button" onclick="imagePrecedente()" class="button-nav mini" value="&#10216;">
                     <div class="images">
-                        <img src="../images/image_projet_html/image1.png" alt="" class="image_present" id="change-image">
+                        <img src="../images/image_projet_html/image1.png" alt="" class="image-present" id="change-image">
                     </div>
                     <input type="button" onclick="imageSuivante()" class="button-nav" value="&#10217;">
                 </div>
@@ -177,12 +195,10 @@
                 <input type="button" onclick="changeImageButton(6)" class="one-circle" id="circle-6"></input>
                 <input type="button" onclick="changeImageButton(7)" class="one-circle" id="circle-7"></input>
                 <input type="button" onclick="changeImageButton(8)" class="one-circle" id="circle-8"></input>
-
-
             </div>
         
-            <div class="back">
-                <a href="../index.html#realisation_html" id="button" class="button_back">
+            <div class="back-to-project">
+                <a href="../index.html#realisation-html" id="button" class="button-back">
                     <p class="mini-button">Retourner au projet</p>
                 </a>
             </div>

@@ -1,0 +1,74 @@
+/*ordinateur*/
+
+@media screen and (min-width: 1200px){
+    
+    article{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    article p{
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 20px;
+    }
+}
+    
+@media screen and (max-width: 1200px) and (min-width: 767px){    
+
+    article{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    article p{
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 20px;
+    }
+}
+    
+    /*ordinateur*/
+    
+@media screen and (max-width: 850px) and (min-width: 767px){
+
+    article{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    article p{
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 20px;
+    }
+}
+    
+    /*ordinateur*/
+    
+@media screen and (max-width: 767px){    
+
+    
+    article{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    article p{
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        font-family: Inter,Helvetica, Arial, Sans-Serif, serif;
+        font-size: 20px;
+    }
+    }

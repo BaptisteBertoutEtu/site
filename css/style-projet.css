@@ -1,102 +1,111 @@
 /* partie page des projets */
 /* partie presentation projet */
 
-.project-title{
-    font-size: 50px;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-}
-
-.project-presentation{
-    width: 85%;
-    font-size: 1.2em;
-    line-height: 1.5em;
-    text-align: center;
-    margin-bottom: 10vh;
+.begin{
+    justify-content: space-around !important;
 }
 
 .content-begin{
-    width: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    margin-bottom: 10vh;
+    width: 85%;
+}
+
+.project-title{
+    font-size: 3.5em;
+}
+
+.project-presentation{
+    text-align: center;
+    width: 85%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.all-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .link-to-project{
-    font-size: 20px;
+    font-size: 1.3em;
     padding: 15px;
 }
 
 /* partie presentation complete*/
 
-.presentation_complete{
-    margin-top: 50px;
+.presentation-complete{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
 }
 
-.content_presentation{
+.title{
+    margin: 0 !important;
+}
+
+.content-presentation{
     display: flex;
     flex-direction: column;
-    width: 60%;
-    margin: auto;
-    text-align: left;
-    line-height: 1.5em;
+    width: 70%;
+    padding: 0;
 }
 
-.value_image_projet{
-    border: solid 7px rgba(173, 173, 173, 0.664);
+.value-image-projet{
+    border: solid 4px rgba(173, 173, 173, 0.664);
     border-radius: 10px;
+    margin: 10vh 0;
+}
+
+.value-presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10vh 0;
+}
+
+.mini-title{
+    font-size: 2.5em;
 }
 
 .text-presentation{
-    font-size: 1em;
+    font-size: 1.1em;
+    line-height: 1.5em;
     text-align: justify;
-}
-
-.set-margin-top{
-    margin-top: 10%;
-}
-
-.set-margin-bottom{
-    margin-bottom: 5%;
-}
-
-.disable-margin-bottom{
+    margin-top: 5vh;
     margin-bottom: 0;
 }
 
-/* video */
-
-.project-video{
+.value-outils{
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 70%;
+    justify-content: space-around;
+    margin: 10vh 0 !important;
 }
 
-.content_video{
-    align-self: center;
+.sect-skills{
+    width: 100% !important;
 }
 
-iframe{
-    border: solid 7px rgba(173, 173, 173, 0.664);
-    border-radius: 10px;
-}
-
-/* toutes les images */
+/* Images */
 
 .all-image{
     background: linear-gradient(to right,hsla(272, 88%, 13%, 0.8),hsla(272, 88%, 13%, 0.8)),url("../images/background.svg");
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
-.content_image{
+.content-image{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-top: 10vh;
+    align-self: center;
     width: 90%;
 }
 
@@ -106,11 +115,11 @@ iframe{
 
 .button-nav{
     align-self: center;
-    font-size: 3em;
-    padding: 0;
     color: white;
     border: none;
     background: none;
+    font-size: 3em;
+    padding: 0;
 }
 
 .button-nav:hover{
@@ -121,17 +130,18 @@ iframe{
 
 .circle-nav{
     display: flex;
-    width: 15%;
     justify-content: space-between;
+    margin-bottom: 5vh;
+    width: 15%;
 }
 
 .one-circle{
     background-color: white;
-    width: 10px;
-    height: 10px;
     border: none;
     border-radius: 100%;
     cursor: pointer;
+    width: 10px;
+    height: 10px;
 }
 
 .selected-circle{
@@ -139,30 +149,24 @@ iframe{
 }
 
 .images{
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
-.image_present{
-    width: 80%;
+.image-present{
     border: solid 7px rgba(173, 173, 173, 0.664);
     border-radius: 10px;
     margin-bottom: 20px;
+    width: 80%;
 }
 
-.back{
+.back-to-project{
     display: flex;
     justify-content: space-around;
 }
 
-.button_back{
+.button-back{
     margin: 40px 0px !important;
     font-size: 20px;
-}
-
-.all-link{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }

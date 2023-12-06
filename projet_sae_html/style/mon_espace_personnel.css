@@ -1,0 +1,267 @@
+@media screen and (min-width: 1200px){
+    section{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    table{
+        border-spacing: 0;
+    }
+    
+    .tableau tr{
+        text-align: center;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        background-color: white;
+    }
+    
+    .tableau th,.tableau td{
+        padding: 10px 20px 10px 20px;
+    }
+    
+    .tableau th{
+        color:white;
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+    
+    .tableau td{
+        background-color: rgba(213, 213, 213, 0.815);
+    }
+    
+    
+    #type{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    #details{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    #midle{
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    
+    
+    .tableau th#left{
+        border-top-left-radius: 10px;
+    }
+    .tableau th#right{
+        border-top-right-radius: 10px;
+    }
+    .tableau td#left{
+        border-bottom-left-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    .tableau td#right{
+        border-bottom-right-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+}
+@media screen and (max-width: 1200px) and (min-width: 767px){
+    section{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    table{
+        border-spacing: 0;
+    }
+    
+    .tableau tr{
+        text-align: center;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        background-color: white;
+    }
+    
+    .tableau th,.tableau td{
+        padding: 10px 20px 10px 20px;
+    }
+    
+    .tableau th{
+        color:white;
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+    
+    .tableau td{
+        background-color: rgba(213, 213, 213, 0.815);
+    }
+    
+    
+    #type{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    #details{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    #midle{
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    
+    
+    .tableau th#left{
+        border-top-left-radius: 10px;
+    }
+    .tableau th#right{
+        border-top-right-radius: 10px;
+    }
+    .tableau td#left{
+        border-bottom-left-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    .tableau td#right{
+        border-bottom-right-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+}
+@media screen and (max-width: 850px) and (min-width: 767px){
+    section{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    table{
+        border-spacing: 0;
+    }
+    
+    .tableau tr{
+        text-align: center;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        background-color: white;
+    }
+    
+    .tableau th,.tableau td{
+        padding: 10px 20px 10px 20px;
+    }
+    
+    .tableau th{
+        color:white;
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+    
+    .tableau td{
+        background-color: rgba(213, 213, 213, 0.815);
+    }
+    
+    
+    #type{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    #details{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    #midle{
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    
+    
+    .tableau th#left{
+        border-top-left-radius: 10px;
+    }
+    .tableau th#right{
+        border-top-right-radius: 10px;
+    }
+    .tableau td#left{
+        border-bottom-left-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    .tableau td#right{
+        border-bottom-right-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+}
+@media screen and (max-width: 767px){
+    section{
+        margin: 30px auto 30px auto;
+        width: 80%;
+    }
+    
+    table{
+        border-spacing: 0;
+    }
+    
+    .tableau tr{
+        text-align: center;
+        font-family: Open Sans,Helvetica, Arial, Sans-Serif, serif;
+        background-color: white;
+    }
+    
+    .tableau th,.tableau td{
+        padding: 10px 20px 10px 20px;
+    }
+    
+    .tableau th{
+        color:white;
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+    
+    .tableau td{
+        background-color: rgba(213, 213, 213, 0.815);
+    }
+    
+    
+    #type{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    #details{
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    #midle{
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+    
+    
+    .tableau th#left{
+        border-top-left-radius: 10px;
+    }
+    .tableau th#right{
+        border-top-right-radius: 10px;
+    }
+    .tableau td#left{
+        border-bottom-left-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-right: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    .tableau td#right{
+        border-bottom-right-radius: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.76);
+        border-left: solid 1px rgba(0, 0, 0, 0.76);
+    }
+    
+}
+
