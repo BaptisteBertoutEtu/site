@@ -156,6 +156,14 @@ a{
     border: white 2px solid;
     border-radius: 100%;
     cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hamburger:hover{
+    box-shadow: 
+        0 0 7px #fff,
+        0 0 10px hsl(330, 85%, 49%),
+        0 0 42px hsl(330, 85%, 49%);;
 }
 
 .bar{
@@ -274,6 +282,12 @@ a{
     margin-bottom: 0;
 }
 
+.sect-skills-experience{
+    background: hsl(271, 88%, 6%);
+    padding: 10px;
+    border-radius: 20px;
+}
+
 /* Formations et experience*/
 
 .all-my-formations-experience{
@@ -390,7 +404,7 @@ a{
 }
 
 .skills-for-project{
-    background-color: black;
+    background: hsl(270, 85%, 5%);
 }
 
 .mini-presentation{
