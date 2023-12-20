@@ -107,7 +107,6 @@ function calculVolume(){
     let calcul;
     tabConcentration.forEach(element => {
         calcul = (valueDoseInjec / element)*1000;
-        calcul -= (calcul*15)/100;
         valueVolume.push(Math.round(calcul)) ;
     });
 
