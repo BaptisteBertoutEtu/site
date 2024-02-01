@@ -1,116 +1,115 @@
 /*
  * Copyright (c) Baptiste Bertout.
  * Mail : baptiste.bertout@gmail.com
+ * Version : 1.0
+ * Compilé à l'aide de NodeJs. Le résultat de la compilation se trouve dans le répertoire build.
  */
 
+const weight = document.querySelector('.weight');
+const tension = document.querySelector('.tension-tube-select');
+const doseInjec = document.querySelector('.doseInjec');
+const allVolume = document.querySelectorAll('.vol');
+const reset = document.querySelector('.reset-button');
+const popup = document.querySelector('.modal');
+const popupCloseButton = document.querySelector('#modal-close');
 
-const tensionTube = document.getElementById("tension-tube-select");
-const inputWeight = document.querySelector(".weight");
-const doseInjec = document.getElementById("doseInjec");
+const nan = 'NaN';
 
+const tabConcentration = [300, 320, 350, 370, 400];
 
-const tabConcentration = [300,320,350,370,400];
-const allVolume = "vol";
+const mapTension = new Map();
+mapTension.set('80', 0.3);
+mapTension.set('100', 0.4);
+mapTension.set('120', 0.5);
 
 let valueDoseInjec = 0;
-let valueVolume = [];
-
-let mapTension = new Map();
-mapTension.set("","NaN");
-mapTension.set("80",0.3);
-mapTension.set("100",0.4);
-mapTension.set("120",0.5);
+let actualTensionValue = 0;
 
 /**
- * Méthode {@code calculer} est applée losque le bouton de calcul est préssé.
- * Elle permet de calculer les différentes valeurs.
+ * Evénement déclenché par un click sur le bouton reset permettant de remettre à zéro l'ensemble des affichages
  */
-function calculer() {
-    if( !weightNotNull()) setNaN();
-    else calculAll();
-}
+reset.addEventListener('click', setNaN);
 
 /**
- * Méthode {@code examNotNull} permettant de définir si la valeur du choix d'examen est nulle ou non.
- * @returns true si la valeur n'est pas nulle, false sinon.
+ * Evenement déclenché par un changement d'état pour l'élément 'select'
+ * permettant de calculer les données voulus et de les afficher.
  */
-function tensionNotNull(){
-    let index = tensionTube.selectedIndex;
-    return notNull(tensionTube.options[index].value);
-}
-
-function weightNotNull(){
-    let bool = notNull(inputWeight.value);
-    if (!bool && tensionNotNull()) {
-        inputWeight.focus();
-        alert("Veuillez remplir le poids du patient")
-    }
-    return bool;
-}
+tension.addEventListener('change', e => {
+	if (!weightNotNull()) {
+		setNaN();
+		return;
+	}
+	actualTensionValue = e.target.value;
+	calculDoseInjec();
+	calculVolume();
+});
 
 /**
- * Méthode {@code notNull} permettant de définir si la valeur passée en paramètre est nulle ou non.
- * @param temp La valeur à vérifier.
- * @returns true si la valeur n'est pas nulle, false sinon.
+ * Evenement déclenché par un changement d'état pour l'élément 'input' correspondant au poids du patient
+ * permettant de calculer les données voulus et de les affichées, si la tension TUBE est également choisie.
  */
-function notNull(temp) {
-    return temp != "";
-}
+weight.addEventListener('input', e => {
+	if (tensionNotNull()) {
+		calculDoseInjec();
+		calculVolume();
+	}
+});
 
 /**
- * Méthode {@code setNaN} permettant de définir les valeurs à "NaN" pour indiquer qu'aucun calcul n'a été effectué.
- */
-function setNaN(){
-    inputWeight.value = "";
-    tensionTube.value = "";
-    tabConcentration.forEach(element => {
-        document.getElementById(doseInjec.innerHTML = "NaN");
-        document.getElementById(allVolume+element).innerText = "NaN";
-    });
-    valueDoseInjec = 0;
-    valueVolume = [];
-}
-
-/**
- * Méthode {@code calculAll} permettant de calculer les différentes valeurs.
- */
-function calculAll(){
-    if(weightNotNull()){
-        calculDoseInjec();
-        calculVolume();
-    }
-}
-
-function calculOnKeyUp(){
-    calculDoseInjec();
-    calculVolume();
-}
-
-/**
- * Méthode {@code calculTempInjec} permettant de calculer le temps d'injection et de les affichées aux endroits adéquat.
+ * Méthode {@code calculDoseInjec()} permettant de calculer la dose d'injection souhaitée.
  */
 function calculDoseInjec() {
-    let index = tensionTube.selectedIndex;
-    let valueTension = tensionTube.options[index].value;
-    let calcul = parseInt(inputWeight.value) * mapTension.get(valueTension);
-    valueDoseInjec = Math.round(calcul*100)/100;
-    doseInjec.innerHTML = valueDoseInjec;
+	const calcul = parseInt(weight.value) * mapTension.get(actualTensionValue);
+	valueDoseInjec = Math.round(calcul * 100) / 100;
+	doseInjec.innerHTML = valueDoseInjec;
 }
-
-
 
 /**
- * Méthode {@code calculVolume} permettant de calculer les valeurs du volume et de les affichées aux endroits adéquat.
+ * Méthode {@code calculVolume()} permettant de calculer le volume pour chaque Concentration.
  */
-function calculVolume(){
-    valueVolume.length = 0;
-    let calcul;
-    tabConcentration.forEach(element => {
-        calcul = (valueDoseInjec / element)*1000;
-        valueVolume.push(Math.round(calcul)) ;
-    });
-
-    for (let i = 0; i < tabConcentration.length; i++) {
-        document.getElementById(allVolume+tabConcentration[i]).innerText = valueVolume[i];
-    }
+function calculVolume() {
+	let calcul;
+	tabConcentration.forEach(element => {
+		calcul = (valueDoseInjec / element) * 1000;
+		document.querySelector(`#vol${element}`).innerHTML = Math.round(calcul);
+	});
 }
+
+/**
+ * Méthode {@code tensionNotNull()} permettant de déterminer si la tension TUBE est
+ * {@code null} ou non, donc si une tension TUBE a été saisie.
+ */
+function tensionNotNull() {
+	return tension.selectedIndex != 0;
+}
+
+/**
+ * Méthode {@code tensionNotNull()} permettant de déterminer si
+ * le poids est {@code null} ou non, donc si un poids a été saisi.
+ */
+function weightNotNull() {
+	const bool = weight.value != '';
+	if (!bool && tensionNotNull()) {
+		popup.style.display = 'block';
+	}
+	return bool;
+}
+
+/**
+ * Méthode {@code setNaN()} permettant de réinitialiser l'ensemble des affichages.
+ */
+function setNaN() {
+	weight.value = '';
+	tension.value = '';
+	doseInjec.innerHTML = nan;
+	allVolume.forEach(elem => {
+		elem.innerHTML = nan;
+	});
+}
+
+/**
+ * Evénement déclenché par un click sur la croix de fermeture de la popup permettant de fermer cette popup.
+ */
+popupCloseButton.addEventListener('click', e => {
+	popup.style.display = 'none';
+});

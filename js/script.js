@@ -89,23 +89,15 @@ function isActiveManual(){
     return burger.classList.contains('manual-active');
 }
 
-function isActiveAuto(){
-    return burger.classList.contains('auto-active');
-}
-
-function isDesactiveAuto(){
-    return burger.classList.contains('auto-desactive');
-}
-
 function copy_mail(){
-    var text = document.getElementById("mail").innerHTML;
-    var doc =  document.getElementById("ok-mail");
+    let text = document.getElementById("mail").innerHTML;
+    let doc =  document.getElementById("ok-mail");
     copy(text,doc);
 }
 
 function copy_tel(){
-    var text = document.getElementById("tel").innerHTML;
-    var doc =  document.getElementById("ok-tel");
+    let text = document.getElementById("tel").innerHTML;
+    let doc =  document.getElementById("ok-tel");
     copy(text,doc);
 }
 
