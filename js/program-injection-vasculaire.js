@@ -1,201 +1,218 @@
 /*
  * Copyright (c) Baptiste Bertout.
  * Mail : baptiste.bertout@gmail.com
+ * Version : 1.0
+ * Compilé à l'aide de NodeJs. Le résultat de la compilation se trouve dans le répertoire build.
  */
 
-const examType = document.getElementById("exam-select");
-const patientType = document.getElementById("patient-select");
-const timeArriv = document.querySelector(".arriv");
-const timeAcquis = document.querySelector(".acquis");
-const tempsInjec = document.getElementById("tempsInjec");
-const debitIode = document.getElementById("debitIode");
+const examSelect = document.querySelector('.exam-select');
+const patientSelect = document.querySelector('.patient-select');
+const arriv = document.querySelector('.arriv');
+const acquis = document.querySelector('.acquis');
 
+const tempsInjec = document.querySelector('.tempsInjec');
+const debitIode = document.querySelector('.debitIode');
+const allVitesseInjec = document.querySelectorAll('.vitesseInjec');
+const allVolume = document.querySelectorAll('.vol');
 
+const reset = document.querySelector('.reset-button');
+const popupExam = document.querySelector('.modal-exam');
+const popupPatient = document.querySelector('.modal-patient');
+const popupExamCloseButton = document.querySelector('#modal-close-exam');
+const popupPatientCloseButton = document.querySelector('#modal-close-patient');
 
-const tabConcentration = [300,320,350];
-const allVitesseInjec = "vitesseInjec";
-const allVolume = "vol";
-
+const tabConcentration = [300, 320, 350];
 let valueTempsInjec = 0;
 let valueDebit = 0;
 let valueVitesseInjec = [];
-let valueVolume = [];
 
-let mapPatient = new Map();
-mapPatient.set("","NaN");
-mapPatient.set("normal",1.4);
-mapPatient.set("agé",1.2);
-mapPatient.set("sportif",1.8);
-mapPatient.set("obese",2.0);
+const nan = 'NaN';
 
-let mapExam = new Map();
-mapExam.set("embolie",10);
-mapExam.set("coroscanner",17);
-mapExam.set("aorteAbdo",30);
-mapExam.set("aorteCrosse",20);
-mapExam.set("membreInf",40);
-mapExam.set("carotide",20);
+const mapPatient = new Map();
+mapPatient.set('', 'NaN');
+mapPatient.set('1', 1.4);
+mapPatient.set('2', 1.2);
+mapPatient.set('3', 1.8);
+mapPatient.set('4', 2.0);
+
+const mapExam = new Map();
+mapExam.set('embolie', 10);
+mapExam.set('coroscanner', 17);
+mapExam.set('aorteAbdo', 30);
+mapExam.set('aorteCrosse', 20);
+mapExam.set('membreInf', 40);
+mapExam.set('carotide', 20);
+
+let actualSelectedExam = '';
+let actualSelectedPatient = '';
 
 /**
- * Méthode {@code calculer} est applée losque le bouton de calcul est préssé.
- * Elle permet de calculer les différentes valeurs.
+ * Evénement déclenché par un click sur le bouton reset permettant de remettre à zéro l'ensemble des affichages
  */
-function calculer() {
-    if( !examNotNull() || !patientNotNull() ) setNaN();
-    else calculAll();
+reset.addEventListener('click', setNaN);
+
+/**
+ * Evenement déclenché par un changement d'état pour l'élément 'select' pour la selection de l'examen
+ * permettant de calculer les données voulus et de les afficher.
+ */
+examSelect.addEventListener('change', e => {
+	const value = e.target.value;
+	const bool = value != 'embolie' && value != '';
+
+	patientSelect.value = bool ? '1' : '';
+	patientSelect.disabled = bool;
+
+	actualSelectedPatient = patientSelect.value;
+	actualSelectedExam = value;
+
+	arriv.value = mapExam.get(value);
+	changeValueDebit();
+});
+
+/**
+ * Evenement déclenché par un changement d'état pour l'élément 'select' pour la selection du patient
+ * permettant de calculer les données voulus et de les afficher.
+ */
+patientSelect.addEventListener('change', changeValueDebit);
+
+/**
+ * Evenement déclenché par un changement d'état pour l'élément 'input' correspondant au temps d'acquisition
+ * permettant de calculer les données voulus et de les affichées, si l'examen et le patient sont choisis.
+ */
+acquis.addEventListener('input', e => {
+	if (!examNotNull() || !patientNotNull()) setNaN();
+	else calculAll();
+});
+
+/**
+ * Méthode {@code setNaN()} permettant de réinitialiser l'ensemble des affichages.
+ */
+function setNaN() {
+	examSelect.value = '';
+	patientSelect.value = '';
+	patientSelect.disabled = false;
+	arriv.value = '';
+	acquis.value = '';
+	tempsInjec.innerHTML = nan;
+	debitIode.innerHTML = nan;
+	setNaNForEach(allVolume);
+	setNaNForEach(allVitesseInjec);
+	valueTempsInjec = 0;
+	valueDebit = 0;
+	valueVitesseInjec = [];
 }
 
 /**
- * Méthode {@code patientNotNull} permettant de définir si la valeur du choix du patient est nulle ou non.
- * @returns true si la valeur n'est pas nulle, false sinon.
+ * Méthode {@code setNaNForEach()} permettant de réinitialiser l'affichage de l'élément passé en paramètre.
+ *
+ * @param {*} params L'élément HTML à réinitialisé.
  */
-function patientNotNull(){
-    let index = patientType.selectedIndex;
-    let bool = notNull(patientType.options[index].value);
-    if (!bool) {
-        patientType.focus();
-        alert("Remplir les paramètres")
-    }
-    return bool;
+function setNaNForEach(params) {
+	params.forEach(elem => {
+		elem.innerHTML = nan;
+	});
 }
 
 /**
- * Méthode {@code acquisNotNull} permettant de définir si la valeur du temps d'acquisition est nulle ou non.
- * @returns true si la valeur n'est pas nulle, false sinon.
- */
-function acquisNotNull(){
-    let bool = notNull(timeAcquis.value);
-    if (!bool) {
-        timeAcquis.focus();
-        alert("Remplir les paramètres");
-    }
-    else if(timeAcquis.value < 0) timeAcquis.value = 0;
-    return bool;
-}
-
-/**
- * Méthode {@code examNotNull} permettant de définir si la valeur du choix d'examen est nulle ou non.
- * @returns true si la valeur n'est pas nulle, false sinon.
- */
-function examNotNull(){
-    let index = examType.selectedIndex;
-    let bool = notNull(examType.options[index].value);
-    if (!bool) {
-        examType.focus();
-        alert("Remplir les paramètres")
-    }
-    return bool;
-}
-
-/**
- * Méthode {@code notNull} permettant de définir si la valeur passée en paramètre est nulle ou non.
- * @param temp La valeur à vérifier.
- * @returns true si la valeur n'est pas nulle, false sinon.
+ * Méthode {@code notNull()} retournant un booléen selon si le paramètre est une chaine de caractère vide.
+ * @param {*} temp Une chaine de caractère.
+ * @returns Cette méthode retourne un booléen {@code true} ou {@code false} selon si le paramètre est une chaine de caractère vide.
  */
 function notNull(temp) {
-    return temp != "";
+	return temp != '';
 }
 
 /**
- * Méthode {@code setNaN} permettant de définir les valeurs à "NaN" pour indiquer qu'aucun calcul n'a été effectué.
+ * Méthode {@code changeValueDebit()} permettant de changer la valeur de la section "Débit d'iode".
  */
-function setNaN(){
-    timeAcquis.value = "";
-    tempsInjec.innerText = "NaN";
-    debitIode.innerText = "NaN";
-    tabConcentration.forEach(element => {
-        document.getElementById(allVitesseInjec+element).innerText = "NaN";
-        document.getElementById(allVolume+element).innerText = "NaN";
-    });
-    examType.value = "";
-    patientType.value = "";
-    timeArriv.value = "";
-    valueTempsInjec = 0;
-    valueDebit = 0;
-    valueVitesseInjec = [];
-    valueVolume = [];
+function changeValueDebit() {
+	const valuePatient = patientSelect.options[patientSelect.selectedIndex].value;
+	actualSelectedPatient = valuePatient;
+	valueDebit = mapPatient.get(valuePatient);
+	debitIode.innerText = valueDebit;
+	calculVitesse();
+	if (notNull(acquis.value)) calculAll();
 }
 
 /**
- * Méthode {@code calculAll} permettant de calculer les différentes valeurs.
+ * Méthode {@code examNotNull()} retournant un booléen selon si la valeur du select examen est {@code null} ou non.
+ * @returns Cette méthode retourne {@code true} si la valeur du select examen est {@code null}, {@code false} sinon.
  */
-function calculAll(){
-    calculTempInjec();
-    calculVolume();
+function examNotNull() {
+	let bool = notNull(actualSelectedExam);
+	if (!bool) {
+		popupExam.style.display = 'block';
+	}
+	return bool;
 }
 
 /**
- * Méthode {@code calculTempInjec} permettant de calculer le temps d'injection et de les affichées aux endroits adéquat.
+ * Méthode {@code patientNotNull()} retournant un booléen selon si la valeur du select patient est {@code null} ou non.
+ * @returns Cette méthode retourne {@code true} si la valeur du select patient est {@code null}, {@code false} sinon.
  */
-function calculTempInjec() {
-    valueTempsInjec = parseInt(timeArriv.value) -(parseInt(timeAcquis.value)/2);
-    tempsInjec.innerText = valueTempsInjec;
+function patientNotNull() {
+	let bool = notNull(actualSelectedPatient);
+	if (!bool) {
+		popupPatient.style.display = 'block';
+	}
+	return bool;
 }
 
 /**
- * Méthode {@code changeValueDebit} permettant de changer la valeur du débit selon la valeur du choix du patient.
- * Les valeurs sont définit dans la Map {@code mapPatient}.
+ * Méthode {@code calculAll()} permettant de calculer le temps d'injection et les volumes.
  */
-function changeValueDebit(){
-    let index = patientType.selectedIndex;
-    let valuePatient = patientType.options[index].value;
-    valueDebit = mapPatient.get(valuePatient);
-    debitIode.innerText = valueDebit;
-    calculVitesse();
-    if(notNull(timeAcquis)) calculAll();
+function calculAll() {
+	calculTempsInjec();
+	calculVolume();
 }
 
 /**
- * Méthode {@code calculVitesse} permettant de calculer les valeurs de la vitesse d'injection et de les affichées aux endroits adéquat.
+ * Méthode {@code calculVitesse()} permettant de calculer l'ensemble des vitesses d'injection.
  */
-function calculVitesse(){
-    valueVitesseInjec.length = 0;
-    let calcul;
-    tabConcentration.forEach(element => {
-        calcul = (valueDebit / element)*1000;
-        valueVitesseInjec.push((Math.round(calcul*10)/10)) ;
-    });
+function calculVitesse() {
+	valueVitesseInjec.length = 0;
+	let calcul;
+	let i = 0;
 
-    for (let i = 0; i < tabConcentration.length; i++) {
-        document.getElementById(allVitesseInjec+tabConcentration[i]).innerText = valueVitesseInjec[i];
-    }
+	tabConcentration.forEach(element => {
+		calcul = Math.round((valueDebit / element) * 1000 * 10) / 10;
+		document.querySelector(`#vitesseInjec${element}`).innerHTML = calcul;
+		valueVitesseInjec[i++] = calcul;
+	});
 }
 
 /**
- * Méthode {@code calculVolume} permettant de calculer les valeurs du volume et de les affichées aux endroits adéquat.
+ * Méthode {@code calculTempsInjec()} permettant de calculer le temps d'injection.
  */
-function calculVolume(){
-    valueVolume.length = 0;
-    let calcul;
-    valueVitesseInjec.forEach(element => {
-        calcul = valueTempsInjec * element;
-        valueVolume.push((Math.round(calcul*10)/10)) ;
-    });
-
-    for (let i = 0; i < tabConcentration.length; i++) {
-        document.getElementById(allVolume+tabConcentration[i]).innerText = valueVolume[i];
-    }
+function calculTempsInjec() {
+	valueTempsInjec = parseInt(arriv.value) - parseInt(acquis.value) / 2;
+	tempsInjec.innerText = valueTempsInjec;
 }
 
 /**
- * Méthode {@code changeValueDebit} permettant de changer la valeur du temps d'arrivé selon la valeur du choix d'examen.
- * Les valeurs sont définit dans la Map {@code mapExamen}.
+ * Méthode {@code calculVolume()} permettant de calculer l'ensemble des volumes.
  */
-function changeValueTempsArriv(){
-    let index = examType.selectedIndex;
-    let valueExam = examType.options[index].value;
-    if(valueExam != "embolie" && valueExam != "") {
-        patientType.disabled = true;
-        patientType.value = "normal";
-    }
-    else if(valueExam == ""){
-        patientType.value = "";
-        patientType.disabled = false;
-    }
-    else {
-        patientType.disabled = false;
-        patientType.value = "";
-    }
-    changeValueDebit();
-    document.getElementById("tempsArriv").value = mapExam.get(valueExam);
+function calculVolume() {
+	let calcul;
+	let i = 0;
+
+	valueVitesseInjec.forEach(element => {
+		calcul = valueTempsInjec * element;
+		document.querySelector(`#vol${tabConcentration[i++]}`).innerHTML =
+			Math.round(calcul * 10) / 10;
+	});
 }
+
+/**
+ * Evénement déclenché par un click sur la croix de fermeture de la popup liée au select examen permettant de fermer cette popup.
+ */
+popupExamCloseButton.addEventListener('click', e => {
+	popupExam.style.display = 'none';
+});
+
+/**
+ * Evénement déclenché par un click sur la croix de fermeture de la popup liée au select patient permettant de fermer cette popup.
+ */
+popupPatientCloseButton.addEventListener('click', e => {
+	popupPatient.style.display = 'none';
+});

@@ -10,7 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocole d'injection</title>
     <link rel="stylesheet" href="../css/style-calcul-injection.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" type="image/png" href="../images/photo.png"/>
+    <script src="../build/program-injection-vasculaire.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +30,7 @@
             </tr>
             <tr>
                 <td class="cell cell-choice">
-                    <select name="examen" id="exam-select" class="choice" onchange="changeValueTempsArriv()">
+                    <select name="examen" class="choice exam-select">
                         <option value="" selected>-- Choisissez un examen --</option>
                         <option value="embolie">Embolie pulmonaire</option>
                         <option value="coroscanner">Coroscanner</option>
@@ -39,16 +41,16 @@
                     </select>
                 </td>
                 <td class="cell cell-choice">
-                    <select name="patient" id="patient-select" class="choice" onchange="changeValueDebit()">
+                    <select name="patient" class="choice patient-select">
                         <option value="" selected>-- Choisissez un patient --</option>
-                        <option value="ag&eacute;">Patient âg&eacute;</option>
-                        <option value="normal">Patient normal</option>
-                        <option value="sportif">Jeune, sportif, femme enceinte</option>
-                        <option value="obese">Patient ob&egrave;se (120-140 Kg)</option>
+                        <option value="1">Patient normal</option>
+                        <option value="2">Patient âg&eacute;</option>
+                        <option value="3">Jeune, sportif, femme enceinte</option>
+                        <option value="4">Patient ob&egrave;se (120-140 Kg)</option>
                     </select>
                 </td>
-                <td class="cell cell-choice"><input type="number" min="0" class="arriv choice" id="tempsArriv" placeholder="sec." disabled></td>
-                <td class="cell cell-choice"><input type="number" min="0" class="acquis choice" placeholder="sec." onkeyup="calculer()" onchange="calculer()"></td>
+                <td class="cell cell-choice"><input type="number" min="0" class="arriv choice" placeholder="sec." disabled></td>
+                <td class="cell cell-choice"><input type="number" min="0" class="acquis choice" placeholder="sec."></td>
             </tr>
         </table>
     </div>
@@ -64,29 +66,49 @@
                 <th class="cell first-line-cell title-cells">Volume <br><span class="units">mL</span></th>
             </tr>
             <tr class="other-line">
-                <td class="cell cell-info" rowspan="3"><p class="info" id="tempsInjec">NaN</p></td>
-                <td class="cell cell-info" rowspan="3"><p class="info" id="debitIode">NaN</p></td>
+                <td class="cell cell-info" rowspan="3"><p class="info tempsInjec">NaN</p></td>
+                <td class="cell cell-info" rowspan="3"><p class="info debitIode">NaN</p></td>
                 <td class="cell"><p class="info">300</p></td>
-                <td class="cell"><p class="info" id="vitesseInjec300">NaN</p></td>
-                <td class="cell"><p class="info" id="vol300">NaN</p></td>
+                <td class="cell"><p class="info vitesseInjec" id="vitesseInjec300">NaN</p></td>
+                <td class="cell"><p class="info vol" id="vol300">NaN</p></td>
             </tr>
             <tr class="other-line">
                 <td class="cell"><p class="info">320</p></td>
-                <td class="cell"><p class="info" id="vitesseInjec320">NaN</p></td>
-                <td class="cell"><p class="info" id="vol320">NaN</p></td>
+                <td class="cell"><p class="info vitesseInjec" id="vitesseInjec320">NaN</p></td>
+                <td class="cell"><p class="info vol" id="vol320">NaN</p></td>
             </tr>
             <tr class="other-line">
                 <td class="cell"><p class="info">350</p></td>
-                <td class="cell"><p class="info" id="vitesseInjec350">NaN</p></td>
-                <td class="cell"><p class="info" id="vol350">NaN</p></td>
+                <td class="cell"><p class="info vitesseInjec" id="vitesseInjec350">NaN</p></td>
+                <td class="cell"><p class="info vol" id="vol350">NaN</p></td>
             </tr>
         </table>
     </div>
 
-    <div class="reset">
-        <input type="button" value="RESET" class="choice" onclick="setNaN()">
+    <!-- popup affichée si aucun poids n'a été saisi et qu'un calcul est demandé -->
+    <div class="modal modal-exam" id="modal">
+        <div class="modal-back"></div>
+        <div class="modal-container">
+            <a href="#" class="close-button" id="modal-close-exam">
+                <span class="material-symbols-outlined">cancel</span>
+            </a>
+            <p class="message-popup">Veuillez choisir un type d'examen.</p>
+        </div>
     </div>
 
-    <script src="../js/program-injection-vasculaire.js"></script>
+    <!-- popup affichée si aucun poids n'a été saisi et qu'un calcul est demandé -->
+    <div class="modal modal-patient" id="modal">
+        <div class="modal-back"></div>
+        <div class="modal-container">
+            <a href="#" class="close-button" id="modal-close-patient">
+                <span class="material-symbols-outlined">cancel</span>
+            </a>
+            <p class="message-popup">Veuillez choisir un type de patient.</p>
+        </div>
+    </div>
+
+    <div class="reset">
+        <input type="button" value="RESET" class="choice reset-button">
+    </div>
 </body>
 </html>
