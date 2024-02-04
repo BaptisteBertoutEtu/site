@@ -7,6 +7,10 @@
         <link href="../css/style-projet.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="../images/photo.png"/>
+
+        <script src="../build/script.js" defer></script>
+        <script src="../build/script-hightlight-projet.js" defer></script>
+        <script src="../build/script-hightlight.js" defer></script>
         
     </head>
     <body>
@@ -28,41 +32,29 @@
             
             <div class="header-right">
                 <div class="link-header-right" >
-                    <a href="../index.html" class="link-header">Accueil</a>
+                    <a href="../index.html" class="link-header" id="goTohome">Accueil</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="../index.html#formations" class="link-header">Formations</a>
+                    <a href="../index.html#formations" class="link-header" id="goToformations">Formations</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="../index.html#competences" class="link-header">Comp&eacute;tences</a>
+                    <a href="../index.html#competences" class="link-header" id="goTocompetences">Comp&eacute;tences</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="../index.html#experiences" class="link-header">Exp&eacute;riences</a>
+                    <a href="../index.html#experiences" class="link-header" id="goToexperiences">Exp&eacute;riences</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="../index.html#realisations" class="link-header">R&eacute;alisations</a>
+                    <a href="../index.html#realisations" class="link-header set-hightlight" id="goTorealisations">R&eacute;alisations</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="../index.html#contact" class="link-header">Contact</a>
+                    <a href="../index.html#contact" class="link-header" id="goTocontact">Contact</a>
                 </div>
             </div>
-        </div>
-
-        <div class="menu-projet to-moove-left">
-            <div class="space"></div>
-            <div>
-                <a href="#home" class="link-header set-hightlight" id="h" onclick="changeHightLight('h')">Acceuil du projet</a>
-            </div>
-            <div class="separator-horizontal"></div>
-            <div>
-                <a href="#presentation" class="link-header" id="p" onclick="changeHightLight('p')">Pr&eacute;sentation</a>
-            </div>
-            <div class="space"></div>
         </div>
 
         <div class="container-hamburger">
@@ -71,6 +63,18 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+        </div>
+
+        <div class="menu-projet to-moove-left">
+            <div class="space"></div>
+            <div>
+                <a href="#home" class="link-header set-hightlight" id="goTohome">Acceuil du projet</a>
+            </div>
+            <div class="separator-horizontal"></div>
+            <div>
+                <a href="#presentation" class="link-header" id="goTopresentation">Pr&eacute;sentation</a>
+            </div>
+            <div class="space"></div>
         </div>
 
         <div class="begin" id="home">
@@ -102,13 +106,13 @@
                 </div>
             </div>
             <div class="go-bottom">
-                <a href="#presentation" class="link-to-bottom" onclick="changeHightLight('p')">
+                <a href="#presentation" class="link-to-bottom">
                     <img src="../images/to-bottom.png" alt="to top" class="bottom-up">
                 </a>
             </div>
 
             <div class="go-up set-incative">
-                <a href="#home" class="link-to-up" onclick="changeHightLight('h')">
+                <a href="#home" class="link-to-up">
                     <img src="../images/to-top.png" alt="to bottom" class="bottom-up">
                 </a>
             </div>
@@ -170,10 +174,6 @@
                 </a>
             </div>
         </div>
-
-
-    <script src="../js/script.js"></script>
-    <script src="../js/script-hightlight-projet.js"></script>
 
 </body>
 </html>

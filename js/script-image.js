@@ -1,39 +1,45 @@
-
-let cpt=1;
+let cpt = 1;
 let lastCpt = cpt;
 
-let min;
-let max;
-let path;
+const min = 1;
+const max = parseInt(
+	document.querySelector('meta[name="nombre-fichier"]').getAttribute('content')
+);
+const path = document
+	.querySelector('meta[name="path"]')
+	.getAttribute('content');
 
-function imageSuivante(){
-    document.getElementById("circle-"+cpt).classList.remove("selected-circle");
-    cpt = (cpt+1 <= max ? cpt+1 : 1);
-    lastCpt = cpt;
-    changeImage(path + cpt + ".png", cpt);
-}
+const image = document.querySelector('.image-present');
+const buttonSuiv = document.querySelector('.button-suiv');
+const buttonPrec = document.querySelector('.button-prec');
 
-function imagePrecedente(){
-    document.getElementById("circle-"+cpt).classList.remove("selected-circle");
-    cpt = (cpt-1 >= min ? cpt-1 : max);
-    lastCpt = cpt;
-    changeImage(path + cpt + ".png", cpt);
-}
+const allOneCircle = document.querySelectorAll('.one-circle');
 
-function changeImage(pathForImage,currentCpt){
-    document.getElementById("circle-"+lastCpt).classList.remove("selected-circle");
-    lastCpt = currentCpt;
-    cpt = currentCpt;
-    document.getElementById("change-image").src = pathForImage+currentCpt+".png";
-    document.getElementById("circle-"+currentCpt).classList.add("selected-circle");
-}
+buttonPrec.addEventListener('click', e => {
+	cpt = cpt - 1 >= min ? cpt - 1 : max;
+	changeToImage(`${path}${cpt}.png`, cpt);
+});
 
-function changeImageButton(currentCpt){
-    changeImage(path,currentCpt);
-}
+buttonSuiv.addEventListener('click', e => {
+	cpt = cpt + 1 <= max ? cpt + 1 : 1;
+	changeToImage(`${path}${cpt}.png`, cpt);
+});
 
-function setMinMaxPath(minimum, maximum, pathForImage){
-    min = minimum;
-    max = maximum;
-    path = pathForImage;
+allOneCircle.forEach(elem => {
+	elem.addEventListener('click', e => {
+		const id = e.target.getAttribute('id').replace('image', '');
+		changeToImage(`${path}${id}.png`, parseInt(id));
+	});
+});
+
+function changeToImage(pathForImage, currentCpt) {
+	document
+		.querySelector(`#image${lastCpt}`)
+		.classList.remove('selected-circle');
+	lastCpt = currentCpt;
+	cpt = currentCpt;
+	image.src = pathForImage;
+	document
+		.querySelector(`#image${currentCpt}`)
+		.classList.add('selected-circle');
 }

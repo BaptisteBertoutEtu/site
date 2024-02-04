@@ -3,6 +3,9 @@ TODO: marque page
 */
 /* sans changement selon la taille d'écran*/
 
+*{
+    scroll-behavior: smooth;
+}
 
 html{
     scroll-behavior: smooth;

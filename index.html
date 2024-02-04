@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./css/style.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="./images/photo.png"/>
+        <script src="../build/script.js" defer></script>
+        <script src="../build/script-hightlight-index.js" defer></script>
+        <script src="../build/script-hightlight.js"></script>
 
     </head>
     <body>
@@ -16,7 +19,7 @@
 
         
         <div class="menu to-moove">
-            <a href="./index.html" class="refresh" onclick="changeHightLight('h')">
+            <a href="./index.html" class="refresh" id="goTohome">
                 <div class="header-left link-header" href="./index.html">
                     <div class="image">
                         <img class="avatar image-header" src="./images/photo.png" alt="avatar">
@@ -30,27 +33,27 @@
             
             <div class="header-right">
                 <div class="link-header-right" >
-                    <a href="./index.html" class="link-header set-hightlight" id="h" onclick="changeHightLight('h')">Accueil</a>
+                    <a href="./index.html" class="link-header set-hightlight" id="goTohome">Accueil</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="#formations" class="link-header" id="f" onclick="changeHightLight('f')">Formations</a>
+                    <a href="#formations" class="link-header" id="goToformations">Formations</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="#competences" class="link-header" id="compet" onclick="changeHightLight('compet')">Comp&eacute;tences</a>
+                    <a href="#competences" class="link-header" id="goTocompetences">Comp&eacute;tences</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="#experiences" class="link-header" id="e" onclick="changeHightLight('e')">Exp&eacute;riences</a>
+                    <a href="#experiences" class="link-header" id="goToexperiences">Exp&eacute;riences</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="#realisations" class="link-header" id="r" onclick="changeHightLight('r')">R&eacute;alisations</a>
+                    <a href="#realisations" class="link-header" id="goTorealisations">R&eacute;alisations</a>
                 </div>
                 <div class="separator" ></div>
                 <div class="link-header-right" >
-                    <a href="#contact" class="link-header" id="conta" onclick="changeHightLight('conta')">Contact</a>
+                    <a href="#contact" class="link-header" id="goTocontact">Contact</a>
                 </div>
             </div>
         </div>
@@ -86,13 +89,13 @@
             </div>
 
             <div class="go-bottom">
-                <a href="#formations" class="link-to-bottom" onclick="changeHightLight('f')">
+                <a href="#formations" class="link-to-bottom">
                     <img src="./images/to-bottom.png" alt="to top" class="bottom-up">
                 </a>
             </div>
 
             <div class="go-up set-incative">
-                <a href="#home" class="link-to-up" onclick="changeHightLight('h')">
+                <a href="#home" class="link-to-up">
                     <img src="./images/to-top.png" alt="to bottom" class="bottom-up">
                 </a>
             </div>
@@ -100,8 +103,8 @@
 
         <!-- Formations -->
 
-        <div class="formation-experience" id="formations">
-            <div class="entete">
+        <div class="formation-experience">
+            <div class="entete"  id="formations">
                 <div class="text title without-margin-bottom">
                     <p>Formations</p>
                     <hr class="hr-title">
@@ -173,8 +176,8 @@
 
         <!-- Comp&eacute;tences -->
 
-        <div class="competence" id="competences">
-            <div class="entete">
+        <div class="competence">
+            <div class="entete" id="competences">
                 <div class="text title without-margin-bottom">
                     <p>Comp&eacute;tences</p>
                     <hr class="hr-title">
@@ -228,8 +231,8 @@
 
         <div class="div-sep"></div>
 
-        <div class="formation-experience" id="experiences">
-            <div class="entete">
+        <div class="formation-experience">
+            <div class="entete" id="experiences">
                 <div class="text title without-margin-bottom">
                     <p>Exp&eacute;riences</p>
                     <hr class="hr-title">
@@ -336,8 +339,8 @@
 
         <div class="div-sep"></div>
 
-        <div class="realisation" id="realisations">
-            <div class="entete">
+        <div class="realisation">
+            <div class="entete" id="realisations">
                 <div class="text title without-margin-bottom">
                     <p>R&eacute;alisations</p>
                     <hr class="hr-title">
@@ -525,8 +528,8 @@
 
         <!-- Contact -->
 
-        <div class="contact" id="contact">
-            <div class="entete">
+        <div class="contact">
+            <div class="entete" id="contact">
                 <div class="text title without-margin-bottom">
                     <p id="without-top">Contact</p>
                     <hr class="hr-title">
@@ -564,8 +567,5 @@
             </div>
         </div>
     
-
-        <script src="../js/script.js"></script>
-        <script src="../js/script-hightlight.js"></script>
     </body>
 </html>

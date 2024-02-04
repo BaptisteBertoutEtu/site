@@ -1,43 +1,13 @@
-let int;
+const divHome = document.querySelector('div[id="home"]');
+const divPresentation = document.querySelector('div[id="presentation"]');
+const divImage = document.querySelector('div[id="image"]');
 
-const h = document.getElementById("home").offsetTop;
-const p = document.getElementById("presentation").offsetTop;
-let i;
-try {
-    i = document.getElementById("image").offsetTop;
-} catch (error) {
-    i = null;
-}
+const selecteur = 'menu-projet';
 
-let lastHightLight = "h"
+const map = new Map();
 
-window.onscroll = () => {
-    changeHightLightOnScroll();
-} 
-
-
-function changeHightLightOnScroll(){
-    int = window.scrollY;
-    if(int < p){
-        changeHightLight("h");
-    }
-    else if(int >= p && i!=null && int < i){
-        changeHightLight("p");
-    }
-    else if(int >= p && i==null){
-        changeHightLight("p");
-    }
-    else{
-        changeHightLight("i");
-    }
-}
-
-function changeHightLight(elem){
-    try {
-        document.getElementById(lastHightLight).classList.remove("set-hightlight");
-        document.getElementById(elem).classList.add("set-hightlight");
-        lastHightLight = elem;
-    } catch (error) {
-        
-    }
+map.set(divHome.getAttribute('id'), divHome.offsetTop);
+map.set(divPresentation.getAttribute('id'), divPresentation.offsetTop);
+if (divImage != null) {
+	map.set(divImage.getAttribute('id'), divImage.offsetTop);
 }

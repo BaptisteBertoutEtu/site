@@ -1,41 +1,24 @@
-let int;
-
-const h = document.getElementById("home").offsetTop;
-const f = document.getElementById("formations").offsetTop;
-const compet = document.getElementById("competences").offsetTop;
-const e = document.getElementById("experiences").offsetTop;
-const r = document.getElementById("realisations").offsetTop;
-const conta = document.getElementById("contact").offsetTop;
-let lastHightLight = "h"
+let lastHightLight = 'home';
 
 window.onscroll = () => {
-    changeHightLightOnScroll();
-} 
+	changeHightLightOnScroll();
+};
 
-function changeHightLightOnScroll(){
-    int = window.scrollY;
-    if(int < f){
-        changeHightLight("h");
-    }
-    else if(int >= f && int < compet){
-        changeHightLight("f");
-    }
-    else if(int >= compet && int < e){
-        changeHightLight("compet");
-    }
-    else if(int >= e && int < r){
-        changeHightLight("e");
-    }
-    else if(int >= r && int < conta){
-        changeHightLight("r");
-    }
-    else{
-        changeHightLight("conta");
-    }
+function changeHightLightOnScroll() {
+	const int = window.scrollY + 2;
+	map.forEach((values, keys) => {
+		if (int >= values) {
+			changeHightLight(keys);
+		}
+	});
 }
 
-function changeHightLight(elem){
-    document.getElementById(lastHightLight).classList.remove("set-hightlight");
-    document.getElementById(elem).classList.add("set-hightlight");
-    lastHightLight = elem;
+function changeHightLight(id) {
+	document
+		.querySelector(`.${selecteur} a[id="goTo${lastHightLight}"]`)
+		.classList.remove('set-hightlight');
+	document
+		.querySelector(`.${selecteur} a[id="goTo${id}"]`)
+		.classList.add('set-hightlight');
+	lastHightLight = id;
 }

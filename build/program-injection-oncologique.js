@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
  * Copyright (c) Baptiste Bertout.
@@ -33,13 +33,13 @@ reset.addEventListener('click', setNaN);
  * permettant de calculer les données voulus et de les afficher.
  */
 tension.addEventListener('change', function (e) {
-	if (!weightNotNull()) {
-		setNaN();
-		return;
-	}
-	actualTensionValue = e.target.value;
-	calculDoseInjec();
-	calculVolume();
+  if (!weightNotNull()) {
+    setNaN();
+    return;
+  }
+  actualTensionValue = e.target.value;
+  calculDoseInjec();
+  calculVolume();
 });
 
 /**
@@ -47,31 +47,30 @@ tension.addEventListener('change', function (e) {
  * permettant de calculer les données voulus et de les affichées, si la tension TUBE est également choisie.
  */
 weight.addEventListener('input', function (e) {
-	if (tensionNotNull()) {
-		calculDoseInjec();
-		calculVolume();
-	}
+  if (tensionNotNull()) {
+    calculDoseInjec();
+    calculVolume();
+  }
 });
 
 /**
  * Méthode {@code calculDoseInjec()} permettant de calculer la dose d'injection souhaitée.
  */
 function calculDoseInjec() {
-	var calcul = parseInt(weight.value) * mapTension.get(actualTensionValue);
-	valueDoseInjec = Math.round(calcul * 100) / 100;
-	doseInjec.innerHTML = valueDoseInjec;
+  var calcul = parseInt(weight.value) * mapTension.get(actualTensionValue);
+  valueDoseInjec = Math.round(calcul * 100) / 100;
+  doseInjec.innerHTML = valueDoseInjec;
 }
 
 /**
  * Méthode {@code calculVolume()} permettant de calculer le volume pour chaque Concentration.
  */
 function calculVolume() {
-	var calcul;
-	tabConcentration.forEach(function (element) {
-		calcul = (valueDoseInjec / element) * 1000;
-		document.querySelector('#vol'.concat(element)).innerHTML =
-			Math.round(calcul);
-	});
+  var calcul;
+  tabConcentration.forEach(function (element) {
+    calcul = valueDoseInjec / element * 1000;
+    document.querySelector("#vol".concat(element)).innerHTML = Math.round(calcul);
+  });
 }
 
 /**
@@ -79,7 +78,7 @@ function calculVolume() {
  * {@code null} ou non, donc si une tension TUBE a été saisie.
  */
 function tensionNotNull() {
-	return tension.selectedIndex != 0;
+  return tension.selectedIndex != 0;
 }
 
 /**
@@ -87,29 +86,29 @@ function tensionNotNull() {
  * le poids est {@code null} ou non, donc si un poids a été saisi.
  */
 function weightNotNull() {
-	var bool = weight.value != '';
-	if (!bool && tensionNotNull()) {
-		popup.style.display = 'block';
-	}
-	return bool;
+  var bool = weight.value != '';
+  if (!bool && tensionNotNull()) {
+    popup.style.display = 'block';
+  }
+  return bool;
 }
 
 /**
  * Méthode {@code setNaN()} permettant de réinitialiser l'ensemble des affichages.
  */
 function setNaN() {
-	weight.value = '';
-	tension.value = '';
-	doseInjec.innerHTML = nan;
-	allVolume.forEach(function (elem) {
-		elem.innerHTML = nan;
-	});
+  weight.value = '';
+  tension.value = '';
+  doseInjec.innerHTML = nan;
+  allVolume.forEach(function (elem) {
+    elem.innerHTML = nan;
+  });
 }
 
 /**
  * Evénement déclenché par un click sur la croix de fermeture de la popup permettant de fermer cette popup.
  */
 popupCloseButton.addEventListener('click', function (e) {
-	popup.style.display = 'none';
+  popup.style.display = 'none';
 });
 //# sourceMappingURL=program-injection-oncologique.js.map
