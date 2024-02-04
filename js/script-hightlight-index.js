@@ -7,7 +7,7 @@ const divContact = document.querySelector('div[id="contact"]');
 
 const selecteur = 'header-right';
 
-let map = new Map();
+const map = new Map();
 
 map.set(divHome.getAttribute('id'), divHome.offsetTop);
 map.set(divFormations.getAttribute('id'), divFormations.offsetTop);

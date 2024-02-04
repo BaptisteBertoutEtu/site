@@ -15,12 +15,12 @@ const buttonPrec = document.querySelector('.button-prec');
 
 const allOneCircle = document.querySelectorAll('.one-circle');
 
-buttonPrec.addEventListener('click', e => {
+buttonPrec.addEventListener('click', () => {
 	cpt = cpt - 1 >= min ? cpt - 1 : max;
 	changeToImage(`${path}${cpt}.png`, cpt);
 });
 
-buttonSuiv.addEventListener('click', e => {
+buttonSuiv.addEventListener('click', () => {
 	cpt = cpt + 1 <= max ? cpt + 1 : 1;
 	changeToImage(`${path}${cpt}.png`, cpt);
 });

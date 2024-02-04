@@ -79,7 +79,7 @@ patientSelect.addEventListener('change', changeValueDebit);
  * Evenement déclenché par un changement d'état pour l'élément 'input' correspondant au temps d'acquisition
  * permettant de calculer les données voulus et de les affichées, si l'examen et le patient sont choisis.
  */
-acquis.addEventListener('input', e => {
+acquis.addEventListener('input', () => {
 	if (!examNotNull() || !patientNotNull()) setNaN();
 	else calculAll();
 });
@@ -206,13 +206,13 @@ function calculVolume() {
 /**
  * Evénement déclenché par un click sur la croix de fermeture de la popup liée au select examen permettant de fermer cette popup.
  */
-popupExamCloseButton.addEventListener('click', e => {
+popupExamCloseButton.addEventListener('click', () => {
 	popupExam.style.display = 'none';
 });
 
 /**
  * Evénement déclenché par un click sur la croix de fermeture de la popup liée au select patient permettant de fermer cette popup.
  */
-popupPatientCloseButton.addEventListener('click', e => {
+popupPatientCloseButton.addEventListener('click', () => {
 	popupPatient.style.display = 'none';
 });

@@ -9,11 +9,11 @@ var image = document.querySelector('.image-present');
 var buttonSuiv = document.querySelector('.button-suiv');
 var buttonPrec = document.querySelector('.button-prec');
 var allOneCircle = document.querySelectorAll('.one-circle');
-buttonPrec.addEventListener('click', function (e) {
+buttonPrec.addEventListener('click', function () {
   cpt = cpt - 1 >= min ? cpt - 1 : max;
   changeToImage("".concat(path).concat(cpt, ".png"), cpt);
 });
-buttonSuiv.addEventListener('click', function (e) {
+buttonSuiv.addEventListener('click', function () {
   cpt = cpt + 1 <= max ? cpt + 1 : 1;
   changeToImage("".concat(path).concat(cpt, ".png"), cpt);
 });

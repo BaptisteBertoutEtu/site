@@ -48,7 +48,7 @@ tension.addEventListener('change', e => {
  * Evenement déclenché par un changement d'état pour l'élément 'input' correspondant au poids du patient
  * permettant de calculer les données voulus et de les affichées, si la tension TUBE est également choisie.
  */
-weight.addEventListener('input', e => {
+weight.addEventListener('input', () => {
 	if (tensionNotNull()) {
 		calculDoseInjec();
 		calculVolume();
@@ -110,6 +110,6 @@ function setNaN() {
 /**
  * Evénement déclenché par un click sur la croix de fermeture de la popup permettant de fermer cette popup.
  */
-popupCloseButton.addEventListener('click', e => {
+popupCloseButton.addEventListener('click', () => {
 	popup.style.display = 'none';
 });

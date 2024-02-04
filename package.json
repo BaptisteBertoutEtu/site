@@ -5,13 +5,14 @@
   "main": "script.js",
   "scripts": {
     "build": "babel js -d build",
-    "watch-home" : "node_modules\\.bin\\babel.cmd js -d build --verbose --watch --source-maps"
+    "watch-home": "node_modules\\.bin\\babel.cmd js -d build --verbose --watch --source-maps"
   },
   "author": "Baptiste Bertout <baptiste.bertout.etu@univ-lille.fr>",
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
+    "eslint": "^8.56.0",
     "prettier": "^3.2.4"
   }
 }

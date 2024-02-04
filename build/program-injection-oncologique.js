@@ -46,7 +46,7 @@ tension.addEventListener('change', function (e) {
  * Evenement déclenché par un changement d'état pour l'élément 'input' correspondant au poids du patient
  * permettant de calculer les données voulus et de les affichées, si la tension TUBE est également choisie.
  */
-weight.addEventListener('input', function (e) {
+weight.addEventListener('input', function () {
   if (tensionNotNull()) {
     calculDoseInjec();
     calculVolume();
@@ -108,7 +108,7 @@ function setNaN() {
 /**
  * Evénement déclenché par un click sur la croix de fermeture de la popup permettant de fermer cette popup.
  */
-popupCloseButton.addEventListener('click', function (e) {
+popupCloseButton.addEventListener('click', function () {
   popup.style.display = 'none';
 });
 //# sourceMappingURL=program-injection-oncologique.js.map
